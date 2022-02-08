@@ -1,0 +1,107 @@
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;   
+}
+body{
+    background-image: url(./images/concrete_wall.png);
+    color: white;
+}
+.brand img{
+   width:100px;
+   height: 88px;
+   margin-top: 13px;
+}
+.container {
+    width: 1024px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.nav-wrapper {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-wrapper ul.nav-list {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+.nav-wrapper ul.nav-list li {
+    margin-left: 30px;
+    padding: 20px 0;
+    position: relative;
+}
+.nav-wrapper ul.nav-list li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    letter-spacing: 1px;
+    transition: all .5s ease-in-out;
+}
+
+.nav-wrapper ul.nav-list li a:hover, .nav-wrapper ul.nav-list  {
+    color:#D4AF37;
+    
+}
+li.active a{
+    font-weight:900;
+}
+.btn {
+    margin-top: 40px;
+    background:transparent;
+    color: white;
+    outline: none;
+    padding: 8px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    border: 1px solid white;
+    transition: all .5s ease-in-out;
+}
+.btn:hover {
+    background: black;
+    border-color: white;
+}
+.btn1 {
+
+    background:black;
+    color: white;
+    outline: none;
+    padding: 8px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    border: 1px solid white;
+    transition: all .5s ease-in-out;
+}
+.btn1:hover {
+    background: white;
+    border-color: black;
+    color: black;
+}
+main section.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+    /* margin-top: 160px; */
+}
+h2{
+  margin-top: 50px;
+  font-size: 33px;
+  margin-bottom: 20px;
+}
+h1{
+   font-size: 35px;
+}
+.info p{
+    margin-top: 20px;
+    font-size: 30px;
+}
+img{
+    margin-top: -20px;
+    width: 462px;
+    height: 590px;
+}
