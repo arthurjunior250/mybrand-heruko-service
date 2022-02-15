@@ -1,38 +1,58 @@
-*{
- margin: 0;
- padding: 0;
- box-sizing: border-box;   
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-body{
+
+nav {
     background-image: url(./images/concrete_wall.png);
     color: white;
+    position: fixed;
+    width: 100%;
 }
-.brand img{
-   width:100px;
-   height: 88px;
-   margin-top: 13px;
+
+main {
+    background-image: url(./images/concrete_wall.png);
 }
+
+.info {
+    margin-top: 120px;
+}
+
+.pic {
+    margin-top: 120px;
+}
+
+.brand img {
+    width: 80px;
+    height: 68px;
+    margin-top: 10px;
+}
+
 .container {
     width: 1024px;
     max-width: 100%;
     margin: 0 auto;
 }
+
 .nav-wrapper {
-    margin-top: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
 .nav-wrapper ul.nav-list {
     list-style-type: none;
     display: flex;
     align-items: center;
 }
+
 .nav-wrapper ul.nav-list li {
     margin-left: 30px;
     padding: 20px 0;
     position: relative;
 }
+
 .nav-wrapper ul.nav-list li a {
     color: white;
     text-decoration: none;
@@ -41,16 +61,18 @@ body{
     transition: all .5s ease-in-out;
 }
 
-.nav-wrapper ul.nav-list li a:hover, .nav-wrapper ul.nav-list  {
-    color:#D4AF37;
-    
+.nav-wrapper ul.nav-list li a:hover,
+.nav-wrapper ul.nav-list {
+    color: #D4AF37;
 }
-li.active a{
-    font-weight:900;
+
+li.active a {
+    font-weight: 900;
 }
+
 .btn {
     margin-top: 40px;
-    background:transparent;
+    background: transparent;
     color: white;
     outline: none;
     padding: 8px 20px;
@@ -60,13 +82,14 @@ li.active a{
     border: 1px solid white;
     transition: all .5s ease-in-out;
 }
+
 .btn:hover {
     background: black;
     border-color: white;
 }
-.btn1 {
 
-    background:black;
+.btn1 {
+    background: black;
     color: white;
     outline: none;
     padding: 8px 20px;
@@ -76,32 +99,120 @@ li.active a{
     border: 1px solid white;
     transition: all .5s ease-in-out;
 }
+
 .btn1:hover {
     background: white;
     border-color: black;
     color: black;
 }
+
 main section.header {
     display: flex;
     align-items: center;
     justify-content: center;
- 
     /* margin-top: 160px; */
 }
-h2{
-  margin-top: 50px;
-  font-size: 33px;
-  margin-bottom: 20px;
+
+h2 {
+    margin-top: 50px;
+    font-size: 33px;
+    margin-bottom: 20px;
+    color: white;
 }
-h1{
-   font-size: 35px;
+
+.header h1 {
+    font-size: 35px;
+    color: white;
 }
-.info p{
+
+.info p {
+    color: white;
     margin-top: 20px;
     font-size: 30px;
 }
-img{
-    margin-top: -20px;
+
+img {
     width: 462px;
     height: 590px;
+}
+
+
+/* .............................................about me ........................ */
+
+.about-me {
+    background-image: url(./images/zan-wGqz5YSqsfk-unsplash.jpg);
+    background-size: cover;
+    display: flex;
+}
+
+.about-me p {
+    color: white;
+    background-image: url(./images/Rectangle\ 14.png);
+    width: 580px;
+}
+
+.about-me img {
+    margin-top: 80px;
+    width: 400px;
+    height: 400px;
+}
+
+.story {
+    margin-top: -410px;
+    width: 50%;
+    font-size: 20px;
+    margin-left: 400px;
+}
+
+.story img {
+    margin-top: -1px;
+    width: 623px;
+    height: 131px;
+}
+
+.story h1 {
+    margin-left: 40px;
+}
+
+.story p {
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+.story button {
+    margin-left: 40px;
+}
+
+
+/* ......................................my skills........................... */
+
+.myskills p {
+    text-align: center;
+    background-color: #D4AF37;
+}
+
+.myskills h1 {
+    text-align: center;
+}
+
+.myskills img {
+    width: 60px;
+    height: 60px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.myskills {
+    justify-content: center;
+}
+
+
+/* 
+.............................................my projects......................... */
+
+.myprojects h1 {
+    text-align: center;
 }
