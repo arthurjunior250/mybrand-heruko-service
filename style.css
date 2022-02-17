@@ -1,192 +1,228 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-nav {
-    background-image: url(./images/concrete_wall.png);
-    color: white;
-    position: fixed;
-    width: 100%;
-}
-
-main {
-    background-image: url(./images/concrete_wall.png);
-}
-
-.info {
-    margin-top: 120px;
-}
-
-.pic {
-    margin-top: 120px;
-}
-
-.brand img {
-    width: 80px;
-    height: 68px;
-    margin-top: 10px;
-}
-
-.container {
-    width: 1024px;
-    max-width: 100%;
-    margin: 0 auto;
-}
-
-.nav-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.nav-wrapper ul.nav-list {
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-}
-
-.nav-wrapper ul.nav-list li {
-    margin-left: 30px;
-    padding: 20px 0;
-    position: relative;
-}
-
-.nav-wrapper ul.nav-list li a {
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-    letter-spacing: 1px;
-    transition: all .5s ease-in-out;
-}
-
-.nav-wrapper ul.nav-list li a:hover,
-.nav-wrapper ul.nav-list {
-    color: #D4AF37;
-}
-
-li.active a {
-    font-weight: 900;
-}
-
-.btn {
-    margin-top: 40px;
-    background: transparent;
-    color: white;
-    outline: none;
-    padding: 8px 20px;
-    font-size: 14px;
-    cursor: pointer;
-    letter-spacing: 1px;
-    border: 1px solid white;
-    transition: all .5s ease-in-out;
-}
-
-.btn:hover {
-    background: black;
-    border-color: white;
-}
-
-.btn1 {
-    background: black;
-    color: white;
-    outline: none;
-    padding: 8px 20px;
-    font-size: 14px;
-    cursor: pointer;
-    letter-spacing: 1px;
-    border: 1px solid white;
-    transition: all .5s ease-in-out;
-}
-
-.btn1:hover {
-    background: white;
-    border-color: black;
-    color: black;
-}
-
-main section.header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* margin-top: 160px; */
-}
-
-h2 {
-    margin-top: 50px;
-    font-size: 33px;
-    margin-bottom: 20px;
-    color: white;
-}
-
-.header h1 {
-    font-size: 35px;
-    color: white;
-}
-
-.info p {
-    color: white;
-    margin-top: 20px;
-    font-size: 30px;
-}
-
-img {
-    width: 462px;
-    height: 590px;
-}
-
-
-/* .............................................about me ........................ */
-
-.about-me {
-    background-image: url(./images/zan-wGqz5YSqsfk-unsplash.jpg);
-    background-size: cover;
-    display: flex;
-}
-
-.about-me p {
-    color: white;
-    background-image: url(./images/Rectangle\ 14.png);
-    width: 580px;
-}
-
-.about-me img {
-    margin-top: 80px;
-    width: 400px;
-    height: 400px;
-}
-
-.story {
-    margin-top: -410px;
-    width: 50%;
-    font-size: 20px;
-    margin-left: 400px;
-}
-
-.story img {
-    margin-top: -1px;
-    width: 623px;
-    height: 131px;
-}
-
-.story h1 {
-    margin-left: 40px;
-}
-
-.story p {
-    margin-top: 20px;
-    margin-left: 40px;
-}
-
-.story button {
-    margin-left: 40px;
-}
-
-
-/* ......................................my skills........................... */
-
-.myskills p {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    nav {
+        background-image: url(./images/concrete_wall.png);
+        color: white;
+        position: fixed;
+        width: 100%;
+    }
+    
+    main {
+        background-image: url(./images/concrete_wall.png);
+    }
+    
+    .info {
+        margin-top: 120px;
+    }
+    
+    .pic {
+        margin-top: 120px;
+    }
+    
+    .brand img {
+        width: 80px;
+        height: 68px;
+        margin-top: 10px;
+    }
+    
+    .container {
+        width: 1024px;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+    .nav-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .nav-wrapper ul.nav-list {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+    }
+    
+    .nav-wrapper ul.nav-list li {
+        margin-left: 30px;
+        padding: 20px 0;
+        position: relative;
+    }
+    
+    .nav-wrapper ul.nav-list li a {
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        letter-spacing: 1px;
+        transition: all .5s ease-in-out;
+    }
+    
+    .nav-wrapper ul.nav-list li a:hover,
+    .nav-wrapper ul.nav-list {
+        color: #D4AF37;
+    }
+    
+    li.active a {
+        font-weight: 900;
+    }
+    
+    .btn {
+        margin-top: 40px;
+        background: transparent;
+        color: white;
+        outline: none;
+        padding: 8px 20px;
+        font-size: 14px;
+        cursor: pointer;
+        letter-spacing: 1px;
+        border: 1px solid white;
+        transition: all .5s ease-in-out;
+    }
+    
+    .btn:hover {
+        background: black;
+        border-color: white;
+    }
+    
+    .btn1 {
+        background: black;
+        color: white;
+        outline: none;
+        padding: 8px 20px;
+        font-size: 14px;
+        cursor: pointer;
+        letter-spacing: 1px;
+        border: 1px solid white;
+        transition: all .5s ease-in-out;
+    }
+    
+    .btn1:hover {
+        background: white;
+        border-color: black;
+        color: black;
+    }
+    
+    main section.header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* margin-top: 160px; */
+    }
+    
+    h2 {
+        margin-top: 50px;
+        font-size: 33px;
+        margin-bottom: 20px;
+        color: white;
+    }
+    
+    .header h1 {
+        font-size: 35px;
+        color: white;
+    }
+    
+    .info p {
+        color: white;
+        margin-top: 20px;
+        font-size: 30px;
+    }
+    
+    img {
+        width: 462px;
+        height: 590px;
+    }
+    /* .............................................about me ........................ */
+    
+    .about-me {
+        background-image: url(./images/zan-wGqz5YSqsfk-unsplash.jpg);
+        background-size: cover;
+        display: flex;
+    }
+    
+    .about-me p {
+        color: white;
+        background-image: url(./images/Rectangle\ 14.png);
+        width: 580px;
+    }
+    
+    .about-me img {
+        margin-top: 80px;
+        width: 400px;
+        height: 300px;
+    }
+    
+    .story {
+        width: 50%;
+        font-size: 20px;
+        margin-left: 400px;
+        margin-top: -310px;
+    }
+    
+    .story img {
+        margin-top: -1px;
+        width: 580px;
+        height: 131px;
+        margin-left: 40px;
+    }
+    
+    .story h1 {
+        margin-left: 40px;
+    }
+    
+    .story p {
+        margin-top: 20px;
+        margin-left: 40px;
+        color: black;
+    }
+    
+    .story button {
+        margin-left: 40px;
+    }
+    
+    .btnmore {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    /* ......................................my skills........................... */
+    
+    .myskills {
+        background-color: #E5E5E5;
+    }
+    
+    .myskills h3 {
+        padding-right: 72px;
+        padding-left: 78px;
+    }
+    
+    .myskills p {
+        margin-top: 20px;
+    }
+    
+    .column-image {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .column img {
+        height: 60px;
+        width: 60px;
+        padding: 60px;
+        margin-right: 40px;
+    }
+    
+    .column-image img {
+        display: grid;
+        grid-template-columns: auto;
+        height: 60px;
+        width: 60px;
+        padding: 10px;
+        margin: auto;
+    }
+    /* .myskills p {
     text-align: center;
     background-color: #D4AF37;
 }
@@ -201,18 +237,231 @@ img {
 }
 
 .column {
-    display: flex;
-    flex-direction: column;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
 }
 
 .myskills {
     justify-content: center;
-}
-
-
-/* 
+} */
+    /* 
 .............................................my projects......................... */
-
-.myprojects h1 {
-    text-align: center;
-}
+    
+    .myprojects {
+        background-color: #E5E5E5;
+    }
+    
+    .card {
+        display: flex;
+        padding: 20px;
+        flex-direction: row;
+        margin-left: 50px;
+        margin-top: -60px;
+    }
+    
+    .header-name {
+        margin-top: 80px;
+        margin-bottom: 40px;
+        text-align: center;
+        /* background-color: #D4AF37; */
+    }
+    
+    .myprojects h1 {
+        text-align: center;
+    }
+    
+    .project-sect {
+        background-color: #C4C4C4;
+        width: 280px;
+        height: 370px;
+        margin-top: 80px;
+        border-radius: 5%;
+        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+        margin-right: 20px;
+    }
+    
+    .project-sect img {
+        width: 280px;
+        height: 130px;
+        padding: 10px;
+    }
+    
+    .emoji img {
+        width: 40px;
+        height: 40px;
+        margin-left: 65px;
+    }
+    
+    .project-sect p {
+        font-size: 18px;
+        padding: 10px;
+    }
+    
+    .project-sect h1 {
+        font-size: 20px;
+    }
+    
+    .next {
+        width: 100px;
+        height: 100px;
+        /* background-color: blue; */
+        margin-left: 70px;
+    }
+    /* ........................................contact me ................................ */
+    
+    .contact-me {
+        margin-left: 170px;
+    }
+    
+    .address {
+        display: flex;
+    }
+    /* .contactme {
+    background-color: red;
+} */
+    
+    input[type=text],
+    select,
+    textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical
+    }
+    
+    input[type=submit] {
+        background-color: black;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    
+    input[type=submit]:hover {
+        align-items: center;
+        background-color: white;
+        color: black;
+        border: 1px solid black;
+    }
+    
+    input[type=submit] {
+        margin-left: 200px;
+    }
+    
+    .form {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+        width: 50%;
+    }
+    
+    textarea {
+        resize: none;
+        min-height: 140px;
+    }
+    
+    .map {
+        margin-left: 60px;
+    }
+    
+    .call {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .email {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .address-info {
+        text-align: center;
+    }
+    
+    .mapouter {
+        margin-top: 20px;
+    }
+    /* .........................................footer................................. */
+    
+    .footer {
+        background-color: black;
+    }
+    
+    .location {
+        color: white;
+        margin-right: 50px;
+    }
+    
+    .icons img {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .footer p {
+        color: white;
+    }
+    /* .newsletter input[type=text] {
+    color: #04AA6D;
+    background-color: #04AA6D;
+} */
+    
+    .control {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .newsletter button {
+        background-color: black;
+        color: white;
+        padding: 5px 40px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        border: 1px solid white;
+    }
+    
+    .footer p {
+        font-size: 15px;
+        text-align: center;
+    }
+    
+    .home {
+        width: 40px;
+        height: 40px;
+        float: right;
+        margin-top: -40px;
+        ;
+    }
+    
+    .line {
+        height: 10px;
+        width: 200px;
+        border-radius: 30%;
+        background-color: #D4AF37;
+        display: block;
+        margin: auto;
+    }
+    
+    .line1 {
+        height: 10px;
+        width: 160px;
+        border-radius: 30%;
+        background-color: #D4AF37;
+        display: block;
+    }
+    
+    .line2 {
+        height: 10px;
+        width: 200px;
+        border-radius: 30%;
+        background-color: #D4AF37;
+        display: block;
+        margin-left: 20px;
+    }
