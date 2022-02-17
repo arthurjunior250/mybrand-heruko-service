@@ -200,6 +200,7 @@
     
     .myskills p {
         margin-top: 20px;
+        margin-bottom: 20px;
     }
     
     .column-image {
@@ -246,10 +247,10 @@
 } */
     /* 
 .............................................my projects......................... */
-    
-    .myprojects {
+    /* .myprojects {
         background-color: #E5E5E5;
     }
+     */
     
     .card {
         display: flex;
@@ -260,10 +261,7 @@
     }
     
     .header-name {
-        margin-top: 80px;
-        margin-bottom: 40px;
         text-align: center;
-        /* background-color: #D4AF37; */
     }
     
     .myprojects h1 {
@@ -304,13 +302,63 @@
     .next {
         width: 100px;
         height: 100px;
-        /* background-color: blue; */
         margin-left: 70px;
+    }
+    /* ........................................myblogs...................................... */
+    
+    .myblogs {
+        background-color: #E5E5E5;
+    }
+    
+    .myblogs h1 {
+        text-align: center;
+    }
+    
+    .blog-sect {
+        background-color: #C4C4C4;
+        width: 280px;
+        height: 370px;
+        margin-top: 80px;
+        border-radius: 5%;
+        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+        margin-right: 20px;
+    }
+    
+    .blog-sect img {
+        width: 280px;
+        height: 130px;
+        padding: 10px;
+    }
+    
+    .blog-sect p {
+        font-size: 18px;
+        padding: 10px;
+    }
+    
+    .blog-sect h1 {
+        font-size: 20px;
+    }
+    
+    .next {
+        width: 100px;
+        height: 100px;
+        margin-left: 70px;
+    }
+    
+    .emoji1 img {
+        width: 40px;
+        height: 40px;
+        margin-left: 65px;
+    }
+    
+    span {
+        color: red;
     }
     /* ........................................contact me ................................ */
     
     .contact-me {
         margin-left: 170px;
+        margin-bottom: 20px;
     }
     
     .address {
@@ -464,4 +512,8 @@
         background-color: #D4AF37;
         display: block;
         margin-left: 20px;
+    }
+    
+    html {
+        scroll-behavior: smooth;
     }
