@@ -66,8 +66,9 @@
         color: #D4AF37;
     }
     
-    li.active a {
+    #active a {
         font-weight: 900;
+        color: #D4AF37;
     }
     
     .btn {
@@ -143,16 +144,10 @@
         display: flex;
     }
     
-    .about-me p {
-        color: white;
-        background-image: url(./images/Rectangle\ 14.png);
-        width: 580px;
-    }
-    
     .about-me img {
-        margin-top: 80px;
-        width: 400px;
-        height: 300px;
+        margin-top: 60px;
+        width: 500px;
+        height: 400px;
     }
     
     .story {
@@ -176,7 +171,7 @@
     .story p {
         margin-top: 20px;
         margin-left: 40px;
-        color: black;
+        color: white;
     }
     
     .story button {
@@ -199,8 +194,8 @@
     }
     
     .myskills p {
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-top: 40px;
+        margin-bottom: 40px;
     }
     
     .column-image {
@@ -257,7 +252,7 @@
         padding: 20px;
         flex-direction: row;
         margin-left: 50px;
-        margin-top: -60px;
+        margin-top: -20px;
     }
     
     .header-name {
@@ -324,6 +319,11 @@
         margin-right: 20px;
     }
     
+    .myblogs a {
+        text-decoration: none;
+        color: black;
+    }
+    
     .blog-sect img {
         width: 280px;
         height: 130px;
@@ -351,12 +351,27 @@
         margin-left: 65px;
     }
     
+    .emoji1:hover {
+        color: #D4AF37;
+        background-color: #D4AF37;
+    }
+    
+    .emoji:hover {
+        color: #D4AF37;
+        background-color: #D4AF37;
+    }
+    
     span {
         color: red;
     }
     /* ........................................contact me ................................ */
     
+    .contactme {
+        margin-bottom: 50px;
+    }
+    
     .contact-me {
+        margin-top: 50px;
         margin-left: 170px;
         margin-bottom: 20px;
     }
@@ -433,6 +448,7 @@
     
     .mapouter {
         margin-top: 20px;
+        border: 1px solid black;
     }
     /* .........................................footer................................. */
     
@@ -485,7 +501,6 @@
         height: 40px;
         float: right;
         margin-top: -40px;
-        ;
     }
     
     .line {
@@ -503,15 +518,6 @@
         border-radius: 30%;
         background-color: #D4AF37;
         display: block;
-    }
-    
-    .line2 {
-        height: 10px;
-        width: 200px;
-        border-radius: 30%;
-        background-color: #D4AF37;
-        display: block;
-        margin-left: 20px;
     }
     
     html {
@@ -589,4 +595,140 @@
     
     .mobile .nav-wrapper ul.dropdown-list li a {
         color: black;
+    }
+    /* modal */
+    /* The Modal (background) */
+    
+    .modal {
+        display: none;
+        /* Hidden by default */
+        /* Stay in place */
+        z-index: 1;
+        /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+        overflow: auto;
+        /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0);
+        /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4);
+        /* Black w/ opacity */
+        text-align: center;
+    }
+    /* Modal Content */
+    
+    .modal-content {
+        background-color: white;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #D4AF37;
+        width: 100%;
+    }
+    /* The Close Button */
+    
+    .close {
+        color: black;
+        float: right;
+        font-size: 40px;
+        font-weight: bold;
+        float: left;
+    }
+    
+    .close:hover,
+    .close:focus {
+        color: #D4AF37;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    
+    .card1 {
+        display: flex;
+        padding: 20px;
+        flex-direction: row;
+        margin-left: 50px;
+        margin-top: -60px;
+    }
+    
+    .project-sect1 {
+        background-color: #C4C4C4;
+        width: 280px;
+        height: 370px;
+        margin-top: 80px;
+        border-radius: 5%;
+        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+        margin-right: 5px;
+    }
+    
+    .project-sect1 img {
+        width: 280px;
+        height: 130px;
+        padding: 10px;
+    }
+    
+    .emoji2 img {
+        width: 40px;
+        height: 40px;
+        margin-left: 5px;
+    }
+    
+    .project-sect1 p {
+        font-size: 18px;
+        padding: 10px;
+    }
+    
+    .project-sect1 h1 {
+        font-size: 20px;
+    }
+    /* end modal */
+    /*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+    
+    #hero {
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        margin-left: 100px;
+        margin-top: -406px;
+        margin-bottom: 100px;
+    }
+    
+    #hero .carousel-content {
+        background: rgba(4, 4, 4, 0.7);
+        padding: 20px;
+        color: #fff;
+        -webkit-animation-duration: .5s;
+        animation-duration: .5s;
+        border-top: 5px solid #D4AF37;
+    }
+    
+    #hero .btn-get-started {
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        letter-spacing: 1px;
+        display: inline-block;
+        padding: 12px 32px;
+        border-radius: 4px;
+        transition: 0.5s;
+        line-height: 1;
+        margin-top: 20px;
+        margin-left: 120px;
+        color: #fff;
+        -webkit-animation-delay: 0.8s;
+        animation-delay: 0.8s;
+        border: 2px solid #D4AF37;
+    }
+    
+    #hero .btn-get-started:hover {
+        background: #D4AF37;
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    #hero a {
+        text-decoration: none;
     }

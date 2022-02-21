@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mr. ARTHUR JUNIOR</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsiveness.css">
 </head>
 
 <body>
@@ -22,7 +23,7 @@
                     <span></span>
                 </div>
                 <ul class="nav-list">
-                    <li class="active">
+                    <li id="active">
                         <a href="#home">HOME</a>
                     </li>
                     <li><a href="#about">ABOUT</a></li>
@@ -57,19 +58,26 @@
         </section>
     </main>
     <section class="about-me" id="about">
+
         <div class="container">
+            <div class="header-name">
+                <h1>ABOUT ME</h1>
+                <div class="line"></div>
+            </div>
             <div>
                 <img src="./images/aboutme.jpg" alt="aboutme">
             </div>
             <div class="story">
-                <h1>ABOUT ME</h1>
-                <div class="line2"></div>
-                <span></span>
-                <P>My name is DUSABIMANA Arthur Junior and I am a Web Application Developer, currently living in Rwanda, Kigali. I have a Bachelor of Science in Computer and software engineering from the University of Rwanda, and my primary focus and inspiration
-                    for my studies is Web Development. I am both driven and self-motivated, and I am constantly experimenting with new technologies and techniques. I am very passionate about Web Development, embedded systems technology and strive to better
-                    myself as a developer, and the development community as a whole.</P>
-                <img src="./images/program.png" alt="" srcset="">
-                <button class="btn1 btnmore">DOWNLOAD RESUME</button>
+                <!-- hero -->
+                <section id="hero">
+                    <div class="slide carousel-content animate__animated animate__fadeInUp">
+                        <P>My name is DUSABIMANA Arthur Junior and I am a Web Application Developer, currently living in Rwanda, Kigali. I have a Bachelor of Science in Computer and software engineering from the University of Rwanda, and my primary focus
+                            and inspiration for my studies is Web Development. I am both driven and self-motivated, and I am constantly experimenting with new technologies and techniques. I am very passionate about Web Development, embedded systems technology
+                            and strive to better myself as a developer, and the development community as a whole.</P>
+                        <div class="text-center clicked1"><a href="#1" class="btn-get-started">DOWNLOAD RESUME</a></div>
+                    </div>
+                </section>
+                <!-- End Hero -->
             </div>
         </div>
     </section>
@@ -146,7 +154,55 @@
                 </div>
             </div>
         </section>
-        <img src="./images/next.png" alt="next" srcset="" class="next">
+
+        <div class="text-center clicked">
+            <img src="./images/next.png" alt="next" srcset="" class="next">
+        </div>
+        <!-- ........................................................modal ...................................................-->
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <section class="card1">
+                    <div class="project-sect1">
+                        <img src="./images/project.png" alt="project">
+                        <h1>PROJECT NAME</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae cum earum illo impedit l aboriosam eligendi perspiciatis amet in molestias sapiente! Quod vel quas dignissimos eos similique ipsa ea nam laborum!</p>
+
+                        <div class="emoji2">
+                            <img src="./images/github.png" alt="" srcset="">
+                            <img src="./images/live.png" alt="" srcset="">
+                        </div>
+                    </div>
+                    <div class="project-sect1">
+                        <img src="./images/project.png" alt="project">
+                        <h1>PROJECT NAME</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae cum earum illo impedit l aboriosam eligendi perspiciatis amet in molestias sapiente! Quod vel quas dignissimos eos similique ipsa ea nam laborum!</p>
+
+                        <div class="emoji2">
+                            <img src="./images/github.png" alt="" srcset="">
+                            <img src="./images/live.png" alt="" srcset="">
+                        </div>
+                    </div>
+                    <div class="project-sect1">
+                        <img src="./images/project.png" alt="project">
+                        <h1>PROJECT NAME</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae cum earum illo impedit l aboriosam eligendi perspiciatis amet in molestias sapiente! Quod vel quas dignissimos eos similique ipsa ea nam laborum!</p>
+
+                        <div class="emoji2">
+                            <img src="./images/github.png" alt="" srcset="">
+                            <img src="./images/live.png" alt="" srcset="">
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+        </div>
+        <!-- end modal -->
     </section>
     <section class=" myblogs" id="blogs">
         <div class="container">
@@ -157,7 +213,9 @@
             <section class="card">
                 <div class="blog-sect">
                     <img src="./images/blog.png" alt="blog">
-                    <h1>BLOG NAME</h1>
+                    <a href="./blogs/blog.html">
+                        <h1>BLOG NAME</h1>
+                    </a>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae cum earum illo impedit l aboriosam eligendi perspiciatis amet in molestias sapiente! Quod vel quas dignissimos eos similique ipsa ea nam laborum!</p>
 
                     <div class="emoji1">
@@ -167,7 +225,9 @@
                 </div>
                 <div class="blog-sect">
                     <img src="./images/blog.png" alt="blog">
-                    <h1>BLOG NAME</h1>
+                    <a href="./blogs/blog.html">
+                        <h1>BLOG NAME</h1>
+                    </a>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae cum earum illo impedit l aboriosam eligendi perspiciatis amet in molestias sapiente! Quod vel quas dignissimos eos similique ipsa ea nam laborum!</p>
 
                     <div class="emoji1">
@@ -177,7 +237,9 @@
                 </div>
                 <div class="blog-sect">
                     <img src="./images/blog.png" alt="blog">
-                    <h1>BLOG NAME</h1>
+                    <a href="./blogs/blog.html">
+                        <h1>BLOG NAME</h1>
+                    </a>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae cum earum illo impedit l aboriosam eligendi perspiciatis amet in molestias sapiente! Quod vel quas dignissimos eos similique ipsa ea nam laborum!</p>
 
                     <div class="emoji1">
@@ -219,7 +281,7 @@
                 </div>
                 <div class="mapouter">
                     <div class="gmap_canvas">
-                        <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=(-1.894507,%2030.054020)&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                        <iframe width="600" height="248" id="gmap_canvas" src="https://maps.google.com/maps?q=(-1.894507,%2030.054020)&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
                 </iframe>
                         <a href="https://www.whatismyip-address.com/divi-discount/"></a>
                         <br>
