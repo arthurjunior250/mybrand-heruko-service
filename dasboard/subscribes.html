@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr. ARTHUR JUNIOR</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="responsiveness.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="profile">
+            <div class="card">
+                <img src="../images/218005602.jpg" alt="arthur">
+            </div>
+            <div class="info">
+                <h1 id="first_name ">arthurjunior</h1>
+                <p id="email ">.</p>
+                <img src="../images/online.png" srcset="">
+            </div>
+
+        </div>
+        <div class="admin">
+            <h2>ADMINISTRATOR</h2>
+        </div>
+        <div class="menu">
+            <ul>
+                <li>
+                    <a href="./dashboard.html"><img src="../images/ant-design_dashboard-outlined.png" alt="" srcset="">
+                        <p>Dashboard</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="./articles.html"><img src="../images/grommet-icons_article.png" alt="" srcset="">
+                        <p>Articles</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="./users.html"><img src="../images/user.png" alt="" srcset="">
+                        <p>Users</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="./comments.html"><img src="../images/comment1.png" alt="" srcset="">
+                        <p>Comments</p>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="./subscribes.html"><img src="../images/subscribes.png" alt="" srcset="">
+                        <p>Subscribes</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="user">
+            <h2>User</h2>
+        </div>
+        <div class="logout">
+            <a href="../index.html">
+                <li><img src="../images/logout.png" alt="" srcset="">
+                    <p>Logout</p>
+                </li>
+            </a>
+        </div>
+
+    </div>
+    <div class="rightside">
+
+    </div>
+    <h1 class="heading">Subscribes</h1>
+    <script>
+        async function getProfile() {
+            let user = localStorage.getItem('user');
+            if (!user) return window.location.href = "./index.html ";
+            user = JSON.parse(user);
+
+
+            document.getElementById('first_name').innerHTML = "arthurjunior";
+            document.getElementById('email').innerHTML = user.email;
+
+
+            const citiesRef = db.collection('users');
+            const snapshot = await citiesRef.where('email', '==', user.email).get();
+            if (snapshot.empty) {
+                console.log('No matching documents.');
+                return;
+            }
+
+            snapshot.forEach(doc => {
+                console.log(JSON.stringify(doc.data()));
+            });
+        }
+        getProfile();
+    </script>
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js "></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js "></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js "></script>
+    <script src="./scripts/firebase.js "></script>
+
+</body>
+
+</html>

@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+input:valid {
+    border: 2px solid red;
+}
+
 nav {
     background-image: url(../images/concrete_wall.png);
     color: white;
@@ -68,6 +72,13 @@ label {
     border-radius: 15px;
 }
 
+#email {
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 15px;
+}
+
 #Pass {
     width: 300px;
     height: 30px;
@@ -110,4 +121,91 @@ input[type="password"] {
 
 input[type="button"] {
     background-color: #2965F1;
+}
+
+@media (min-width: 322px) and (max-width:415px) {
+    .brand img {
+        width: 55px;
+        height: 53px;
+        margin-left: 20px;
+    }
+    .about-me img {
+        width: 200px;
+        height: 150px;
+        margin-top: -1px;
+    }
+    .login {
+        border-radius: 20px;
+        width: 250px;
+        overflow: hidden;
+        margin: 0 auto;
+        padding: 80px;
+        background: white;
+        height: 400px;
+        margin-top: 20px;
+    }
+    h2 {
+        color: black;
+        padding: 20px;
+    }
+    label {
+        color: black;
+        font-size: 17px;
+    }
+    #Uname {
+        width: 230px;
+        height: 30px;
+        border: none;
+        border-radius: 15px;
+    }
+    #Pass {
+        width: 230px;
+        height: 30px;
+        border: none;
+        border-radius: 15px;
+    }
+    #log {
+        width: 100px;
+        height: 30px;
+        border: none;
+        color: white;
+        margin-left: 1px;
+    }
+    span {
+        color: black;
+        font-size: 17px;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+        font-weight: 900;
+    }
+    .signin {
+        display: flex;
+        flex-direction: column-reverse;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+    }
+    input[type="text"],
+    input[type="password"] {
+        margin-left: -70px;
+        background-color: #C4C4C4;
+        border-radius: 10%;
+        padding: 10px 20px;
+    }
+    input[type="button"] {
+        margin-left: -100px;
+        background-color: #2965F1;
+    }
+    .footer {
+        font-size: 13px;
+    }
+    input[type="checkbox"] {
+        margin-left: -70px;
+    }
+    .have {
+        margin-left: -55px;
+        font-size: 12px;
+    }
 }

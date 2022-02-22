@@ -259,13 +259,13 @@
         </div>
         <div class="address">
             <div class="form">
-                <form>
+                <form action="javascript:sendmail()" method="post">
 
-                    <input type="text" placeholder="Enter Your name..">
+                    <input type="text" placeholder="Enter Your name.." required="">
 
-                    <input type="text" placeholder="Enter Your Email..">
+                    <input type="text" placeholder="Enter Your Email.." required="">
 
-                    <textarea placeholder="Leave Your Message.." style="height:200px"></textarea>
+                    <textarea placeholder="Leave Your Message.." style="height:200px" required=""></textarea>
 
                     <input type="submit" value="Send">
 
@@ -332,6 +332,12 @@
         </div>
     </section>
     <script src="app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js"></script>
+
+    <script src="./scripts/firebase.js"></script>
+    <script src="./scripts/auth.js"></script>
 </body>
 
 </html>

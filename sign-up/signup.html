@@ -30,27 +30,33 @@
                         <label><b>User Name     
                 </b>    
                 </label>
-                        <input type="text" name="Uname" id="Uname" placeholder="Username">
+                        <input type="text" name="Uname" id="Uname" placeholder="Username" required="">
                         <br><br>
                         <label><b>Email     
                         </b>   
-                        <input type="text" name="Uname" id="Uname" placeholder="Username">
+                        <input type="text" name="Uemail" id="email" placeholder="Email" required="">
                         <br><br>
                         <label><b>Password     
                 </b>    
                 </label>
-                        <input type="Password" name="Pass" id="Pass" placeholder="Password">
+                        <input type="Password" name="Pass" id="Pass" placeholder="Password" required="">
                         <br><br>
 
-                        <input type="button" name="log" id="log" value="Sign up">
+                        <input type="button" name="log" id="log" onclick="addUser()" value="Sign up">
 
-                        <br><br>have an account? <a href="../sign-in/signin.html">Sign in</a>
+                        <br><br><span class="have">have an account? </span> <a href="../sign-in/signin.html">Sign in</a>
                     </form>
                 </div>
             </div>
         </section>
         <p>©COPYRIGHT ARTHURJUNIOR250. ALL RIGHT RESERVED </p>
     </main>
+
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js"></script>
+    <script src="../scripts/firebase.js"></script>
+    <script src="../scripts/auth.js"></script>
 </body>
 
 </html>
