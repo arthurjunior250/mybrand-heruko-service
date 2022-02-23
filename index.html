@@ -261,13 +261,17 @@
             <div class="form">
                 <form action="javascript:sendmail()" method="post">
 
-                    <input type="text" placeholder="Enter Your name.." required="">
+                    <input type="text" placeholder="Enter Your name.." required="" id="contact-name" onkeyup='validateName()'>
+                    <span class='error-message' id='name-error'></span>
 
-                    <input type="text" placeholder="Enter Your Email.." required="">
+                    <input type="text" placeholder="Enter Your Email.." required="" id="contact-email" onkeyup='validateEmail()'>
+                    <span class='error-message' id='email-error'></span>
 
-                    <textarea placeholder="Leave Your Message.." style="height:200px" required=""></textarea>
+                    <textarea placeholder="Leave Your Message.." style="height:200px" required="" id='contact-message' onkeyup='validateMessage()'></textarea>
+                    <span class='error-message' id='message-error'></span>
 
-                    <input type="submit" value="Send">
+                    <input type="submit" value="Send" onclick='return validateForm()'>
+                    <span class='error-message' id='submit-error'></span>
 
                 </form>
             </div>
@@ -338,6 +342,7 @@
 
     <script src="./scripts/firebase.js"></script>
     <script src="./scripts/auth.js"></script>
+    <script src="./validation.js"></script>
 </body>
 
 </html>
