@@ -17,8 +17,8 @@
                 <img src="../images/218005602.jpg" alt="arthur">
             </div>
             <div class="info">
-                <h1 id="first_name ">arthurjunior</h1>
-                <p id="email ">.</p>
+                <h4><b id="first_name"></b> <b id="last_name"></b></h4>
+                <p id="email"></p>
                 <img src="../images/online.png" srcset="">
             </div>
 
@@ -53,6 +53,16 @@
                         <p>Subscribes</p>
                     </a>
                 </li>
+                <li>
+                    <a href="./queries.html"><img src="../images/question.png" alt="" srcset="">
+                        <p>Queries/Questions</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="./settings.html"><img src="../images/settings.png" alt="" srcset="">
+                        <p>Settings</p>
+                    </a>
+                </li>
             </ul>
         </div>
         <div class="user">
@@ -71,6 +81,51 @@
 
     </div>
     <h1 class="heading">Comments</h1>
+    <div class="menu2">
+        <ul>
+            <li>Date</li>
+            <li>Names</li>
+            <li>Action</li>
+        </ul>
+        <hr>
+    </div>
+    <div class="menu2">
+        <ul>
+            <li>02-02-2022</li>
+            <li>arthur junior</li>
+            <li><button style="background-color:black;">Delete</button></li>
+        </ul>
+        <p class="comments">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ab, animi harum fugit doloribus error voluptate facilis suscipit quod ea odio minus voluptas unde, vero laudantium accusamus. Natus, fugiat accusantium.</p>
+        <hr>
+        <ul>
+            <li>02-02-2022</li>
+            <li>arthur junior</li>
+            <li><button style="background-color:black;">Delete</button></li>
+        </ul>
+        <p class="comments">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ab, animi harum fugit doloribus error voluptate facilis suscipit quod ea odio minus voluptas unde, vero laudantium accusamus. Natus, fugiat accusantium.</p>
+        <hr>
+        <ul>
+            <li>02-02-2022</li>
+            <li>arthur junior</li>
+            <li><button style="background-color:black;">Delete</button></li>
+        </ul>
+        <p class="comments">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ab, animi harum fugit doloribus error voluptate facilis suscipit quod ea odio minus voluptas unde, vero laudantium accusamus. Natus, fugiat accusantium.</p>
+        <hr>
+        <ul>
+            <li>02-02-2022</li>
+            <li>arthur junior</li>
+            <li><button style="background-color:black;">Delete</button></li>
+        </ul>
+        <p class="comments">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ab, animi harum fugit doloribus error voluptate facilis suscipit quod ea odio minus voluptas unde, vero laudantium accusamus. Natus, fugiat accusantium.</p>
+        <ul>
+            <li>02-02-2022</li>
+            <li>arthur junior</li>
+            <li><button style="background-color:black;">Delete</button></li>
+        </ul>
+        <p class="comments">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ab, animi harum fugit doloribus error voluptate facilis suscipit quod ea odio minus voluptas unde, vero laudantium accusamus. Natus, fugiat accusantium.</p>
+        <hr>
+
+    </div>
     <script>
         async function getProfile() {
             let user = localStorage.getItem('user');
@@ -78,7 +133,8 @@
             user = JSON.parse(user);
 
 
-            document.getElementById('first_name').innerHTML = "arthurjunior";
+            document.getElementById('first_name').innerHTML = "Arthur";
+            document.getElementById('last_name').innerHTML = "Junior";
             document.getElementById('email').innerHTML = user.email;
 
 
@@ -102,6 +158,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js "></script>
     <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js "></script>
     <script src="./scripts/firebase.js "></script>
+
 
 </body>
 

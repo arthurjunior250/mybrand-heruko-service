@@ -18,8 +18,8 @@
                 <img src="../images/218005602.jpg" alt="arthur">
             </div>
             <div class="info">
-                <h1 id="first_name ">arthurjunior</h1>
-                <p id="email ">.</p>
+                <h4><b id="first_name"></b> <b id="last_name"></b></h4>
+                <p id="email"></p>
                 <img src="../images/online.png" srcset="">
             </div>
 
@@ -54,6 +54,16 @@
                         <p>Subscribes</p>
                     </a>
                 </li>
+                <li>
+                    <a href="./queries.html"><img src="../images/question.png" alt="" srcset="">
+                        <p>Queries/Questions</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="./settings.html"><img src="../images/settings.png" alt="" srcset="">
+                        <p>Settings</p>
+                    </a>
+                </li>
             </ul>
         </div>
         <div class="user">
@@ -72,19 +82,67 @@
 
     </div>
     <h1 class="heading">Dashboard</h1>
+    <input type="text" placeholder="Search Dashboard..."><button class="search">Search</button>
+    <div>
+        <table style="width:30%">
+            <tr>
+                <th colspan="2">Site info</th>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Articles</td>
+
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Users</td>
+
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Comments</td>
+
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Subscribes</td>
+
+            </tr>
+        </table>
+        <table style="width:30%" class="table2">
+            <tr>
+                <th colspan="2">Graph</th>
+            </tr>
+            <tr>
+                <td colspan="4" class="titles">
+                    <p>Analytics</p>
+                    <p>Subscribes</p>
+                    <p>Articles</p>
+                    <p>comments</p>
+                    <p>users</p>
+                </td>
+
+            </tr>
+            <tr>
+                <td colspan="2"><img src="../images/Captureee 1.png" alt="" srcset=""></td>
+            </tr>
+
+        </table>
+    </div>
+
     <script>
         async function getProfile() {
             let user = localStorage.getItem('user');
-            if (!user) return window.location.href = "./index.html ";
+            if (!user) return window.location.href = "./index.html";
             user = JSON.parse(user);
 
 
-            document.getElementById('first_name').innerHTML = "arthurjunior";
+            document.getElementById('first_name').innerHTML = "Arthur";
+            document.getElementById('last_name').innerHTML = "Junior";
             document.getElementById('email').innerHTML = user.email;
 
-
             const citiesRef = db.collection('users');
-            const snapshot = await citiesRef.where('email', '==', user.email).get();
+            const snapshot = await citiesRef.where('email', '==', user.email).get();;
             if (snapshot.empty) {
                 console.log('No matching documents.');
                 return;

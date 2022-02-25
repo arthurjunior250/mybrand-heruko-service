@@ -17,8 +17,8 @@
                 <img src="../images/218005602.jpg" alt="arthur">
             </div>
             <div class="info">
-                <h1 id="first_name ">arthurjunior</h1>
-                <p id="email ">.</p>
+                <h4><b id="first_name"></b> <b id="last_name"></b></h4>
+                <p id="email"></p>
                 <img src="../images/online.png" srcset="">
             </div>
 
@@ -53,6 +53,16 @@
                         <p>Subscribes</p>
                     </a>
                 </li>
+                <li>
+                    <a href="./queries.html"><img src="../images/question.png" alt="" srcset="">
+                        <p>Queries/Questions</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="./settings.html"><img src="../images/settings.png" alt="" srcset="">
+                        <p>Settings</p>
+                    </a>
+                </li>
             </ul>
         </div>
         <div class="user">
@@ -71,14 +81,74 @@
 
     </div>
     <h1 class="heading">Users</h1>
+    <div class="menu2">
+        <ul>
+            <li>No:</li>
+            <li>Names</li>
+            <li>Email</li>
+            <li>Action</li>
+        </ul>
+        <hr>
+    </div>
+    <div class="menu2">
+        <ul>
+            <li>01</li>
+            <li style="margin-left: 50px;">arthur junior</li>
+            <li>Another@gmail.com</li>
+            <li><button style="background-color:black;">Delete</button></li>
+        </ul>
+        <hr>
+        <ul>
+            <li>02</li>
+            <li style="margin-left: 50px;">arthur junior</li>
+            <li>Another@gmail.com</li>
+            <li><button style="background-color:black;">Delete</button></li>
+        </ul>
+        <hr>
+        <ul>
+            <li>03</li>
+            <li style="margin-left: 50px;">arthur junior</li>
+            <li>Another@gmail.com</li>
+            <li><button style="background-color:black;">Delete</button></li>
+        </ul>
+        <hr>
+        <ul>
+            <li>04</li>
+            <li style="margin-left: 50px;">arthur junior</li>
+            <li>Another@gmail.com</li>
+            <li><button style="background-color:black;">Delete</button></li>
+        </ul>
+        <hr>
+        <ul>
+            <li>05</li>
+            <li style="margin-left: 50px;">arthur junior</li>
+            <li>Another@gmail.com</li>
+            <li><button style="background-color:black;">Delete</button></li>
+        </ul>
+        <hr>
+        <ul>
+            <li>06</li>
+            <li style="margin-left: 50px;">arthur junior</li>
+            <li>Another@gmail.com</li>
+            <li><button style="background-color:black;">Delete</button></li>
+        </ul>
+        <hr>
+        <ul>
+            <li>07</li>
+            <li style="margin-left: 50px;">arthur junior</li>
+            <li>Another@gmail.com</li>
+            <li><button style="background-color:black;">Delete</button></li>
+        </ul>
+        <hr>
+    </div>
     <script>
         async function getProfile() {
             let user = localStorage.getItem('user');
             if (!user) return window.location.href = "./index.html ";
             user = JSON.parse(user);
 
-
-            document.getElementById('first_name').innerHTML = "arthurjunior";
+            document.getElementById('first_name').innerHTML = "Arthur";
+            document.getElementById('last_name').innerHTML = "Junior";
             document.getElementById('email').innerHTML = user.email;
 
 

@@ -60,7 +60,7 @@ function validateForm() {
 
 function validateMessage() {
     var message = document.getElementById('contact-message').value;
-    var required = 30;
+    var required = 5;
     var left = required - message.length;
 
     if (left > 0) {

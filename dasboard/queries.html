@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="responsiveness.css">
 </head>
 
-<body>
+<body onload="getalldataonce() ">
     <div class="container">
         <div class="profile">
             <div class="card">
@@ -48,12 +48,12 @@
                         <p>Comments</p>
                     </a>
                 </li>
-                <li class="active">
+                <li>
                     <a href="./subscribes.html"><img src="../images/subscribes.png" alt="" srcset="">
                         <p>Subscribes</p>
                     </a>
                 </li>
-                <li>
+                <li class="active">
                     <a href="./queries.html"><img src="../images/question.png" alt="" srcset="">
                         <p>Queries/Questions</p>
                     </a>
@@ -80,65 +80,20 @@
     <div class="rightside">
 
     </div>
-    <h1 class="heading">Subscribes</h1>
+    <h1 class="heading">Queries/Questions</h1>
     <div class="menu2">
         <ul>
-            <li>Subscribers <br><input type="checkbox">Unsubscribe All</li>
+            <li>Names</li>
             <li>Email</li>
-            <li>Date</li>
-            <li>ID</li>
+            <li>Queries/Questions</li>
         </ul>
         <hr>
     </div>
     <div class="menu2">
         <ul>
-
-            <li>arthur junior<br><input type="checkbox">Unsubscribe</li>
-            <li>Another@gmail.com</li>
-            <li style="margin-right: 50px;">02-02-2022</li>
-            <li>1</li>
-        </ul>
-        <hr>
-        <ul>
-            <li>arthur junior<br><input type="checkbox">Unsubscribe</li>
-            <li>Another@gmail.com</li>
-            <li style="margin-right: 50px;">02-02-2022</li>
-            <li>2</li>
-        </ul>
-        <hr>
-        <ul>
-            <li>arthur junior<br><input type="checkbox">Unsubscribe</li>
-            <li>Another@gmail.com</li>
-            <li style="margin-right: 50px;">02-02-2022</li>
-            <li>3</li>
-        </ul>
-        <hr>
-        <ul>
-            <li>arthur junior<br><input type="checkbox">Unsubscribe</li>
-            <li>Another@gmail.com</li>
-            <li style="margin-right: 50px;">02-02-2022</li>
-            <li>4</li>
-        </ul>
-        <hr>
-        <ul>
-            <li>arthur junior<br><input type="checkbox">Unsubscribe</li>
-            <li>Another@gmail.com</li>
-            <li style="margin-right: 50px;">02-02-2022</li>
-            <li>5</li>
-        </ul>
-        <hr>
-        <ul>
-            <li>arthur junior<br><input type="checkbox">Unsubscribe</li>
-            <li>Another@gmail.com</li>
-            <li style="margin-right: 50px;">02-02-2022</li>
-            <li>6</li>
-        </ul>
-        <hr>
-        <ul>
-            <li>arthur junior<br><input type="checkbox">Unsubscribe</li>
-            <li>Another@gmail.com</li>
-            <li style="margin-right: 50px;">02-02-2022</li>
-            <li>7</li>
+            <li id="user-name">arthur junior</li>
+            <li id="user-email">Published@gmail.com</li>
+            <li id="user-message">hey,how are you?</li>
         </ul>
         <hr>
     </div>
@@ -166,6 +121,10 @@
             });
         }
         getProfile();
+
+
+
+        // ............................queries.......................
     </script>
 
 
@@ -174,6 +133,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js "></script>
     <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js "></script>
     <script src="./scripts/firebase.js "></script>
+    <script src="../comment.js"></script>
 
 </body>
 
