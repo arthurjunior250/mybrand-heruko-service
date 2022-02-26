@@ -33,7 +33,7 @@
                         <p>Dashboard</p>
                     </a>
                 </li>
-                <li>
+                <li class="active">
                     <a href="./articles.html"><img src="../images/grommet-icons_article.png" alt="" srcset="">
                         <p>Articles</p>
                     </a>
@@ -53,7 +53,7 @@
                         <p>Subscribes</p>
                     </a>
                 </li>
-                <li class="active">
+                <li>
                     <a href="./queries.html"><img src="../images/question.png" alt="" srcset="">
                         <p>Queries/Questions</p>
                     </a>
@@ -80,58 +80,62 @@
     <div class="rightside">
 
     </div>
-    <h1 class="heading">Queries/Questions</h1>
+    <h1 class="heading">New Article</h1>
     <div class="menu2">
-        <ul>
-            <li>Names</li>
-            <li>Email</li>
-            <li>Queries/Questions</li>
-        </ul>
-        <hr>
-    </div>
-    <div class="menu2">
-        <ul>
-            <li id="user-name">arthur junior</li>
-            <li id="user-email">Published@gmail.com</li>
-            <li id="user-message">hey,how are you?</li>
-        </ul>
-        <hr>
-    </div>
-    <script>
-        async function getProfile() {
-            let user = localStorage.getItem('user');
-            if (!user) return window.location.href = "./index.html ";
-            user = JSON.parse(user);
+        <div class="form">
+            <form class="new">
+                <input type="file" id="imaging" />
+
+                <input type="text" placeholder="Title..." required="" id="title-name">
 
 
-            document.getElementById('first_name').innerHTML = "Arthur";
-            document.getElementById('last_name').innerHTML = "Junior";
-            document.getElementById('email').innerHTML = user.email;
+                <textarea placeholder="body.." style="height:200px" required="" id='body-message'></textarea>
 
 
-            const citiesRef = db.collection('users');
-            const snapshot = await citiesRef.where('email', '==', user.email).get();
-            if (snapshot.empty) {
-                console.log('No matching documents.');
-                return;
+                <button type="submit" id="create">Create</button>
+
+
+            </form>
+        </div>
+
+        <script defer>
+            async function getProfile() {
+                let user = localStorage.getItem('user');
+                if (!user) return window.location.href = "./index.html ";
+                user = JSON.parse(user);
+
+
+                document.getElementById('first_name').innerHTML = "Arthur";
+                document.getElementById('last_name').innerHTML = "Junior";
+                document.getElementById('email').innerHTML = user.email;
+
+
+                const citiesRef = db.collection('users');
+                const snapshot = await citiesRef.where('email', '==', user.email).get();
+                if (snapshot.empty) {
+                    console.log('No matching documents.');
+                    return;
+                }
+
+                snapshot.forEach(doc => {
+                    console.log(JSON.stringify(doc.data()));
+                });
             }
-
-            snapshot.forEach(doc => {
-                console.log(JSON.stringify(doc.data()));
-            });
-        }
-        getProfile();
+            getProfile();
 
 
 
-        // ............................queries.......................
-    </script>
+            // ............................queries.......................
+        </script>
 
-    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js "></script>
-    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js "></script>
-    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js "></script>
-    <script src="./scripts/firebase.js "></script>
-    <script src="../comment.js"></script>
+        <script defer src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js "></script>
+        <script defer src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js "></script>
+        <script defer src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js "></script>
+
+        <script defer src="https://www.gstatic.com/firebasejs/7.21.1/firebase-storage.js"></script>
+        <script defer src="../configuration.js"></script>
+        <script defer src="../comment.js"></script>
+        <script defer src="../createblogs.js"></script>
 
 </body>
 

@@ -7,7 +7,9 @@
     nav {
         background-image: url(../images/concrete_wall.png);
         color: white;
-        position: fixed;
+        position: sticky;
+        top: 0;
+        z-index: 100;
         width: 100%;
     }
     
@@ -549,4 +551,91 @@
         h1 {
             font-size: 15px;
         }
+    }
+    /* ........................................myblogs...................................... */
+    
+    .myblogs {
+        background-color: #e5e5e5;
+    }
+    
+    .myblogs h1 {
+        text-align: center;
+    }
+    
+    .blog-sect {
+        background-color: #c4c4c4;
+        width: 280px;
+        height: 400px;
+        border-radius: 5%;
+        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+        margin-bottom: 40px;
+        margin-top: 50px;
+    }
+    
+    .myblogs a {
+        text-decoration: none;
+        color: black;
+    }
+    
+    .blog-sect img {
+        width: 280px;
+        height: 130px;
+        padding: 10px;
+    }
+    
+    .blog-sect p {
+        font-size: 18px;
+        padding: 10px;
+    }
+    
+    .blog-sect h1 {
+        font-size: 20px;
+    }
+    
+    .next {
+        width: 100px;
+        height: 100px;
+        margin-left: 70px;
+    }
+    
+    .emoji1 img {
+        width: 40px;
+        height: 40px;
+        margin-left: 65px;
+    }
+    
+    .emoji1:hover {
+        color: #d4af37;
+        background-color: #d4af37;
+    }
+    
+    .emoji:hover {
+        color: #d4af37;
+        background-color: #d4af37;
+    }
+    
+    span {
+        color: red;
+    }
+    
+    #blog__card {
+        display: flex;
+        padding: 20px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .searching {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .searching input[type="text"] {
+        margin-top: 40px;
+        color: black;
+    }
+    
+    .searching button {
+        margin-top: 40px;
+        border-radius: 10px;
     }
