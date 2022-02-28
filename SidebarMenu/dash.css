@@ -1,0 +1,572 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    /* ===== Colors ===== */
+    --body-color: white;
+    --sidebar-color: #32363B;
+    --primary-color: black;
+    --primary-color-light: #F6F5FF;
+    --toggle-color: white;
+    --text-color: white;
+}
+
+.active {
+    background-color: black;
+    color: white;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--body-color);
+    transition: var(--tran-05);
+}
+
+::selection {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+body.dark {
+    --body-color: #18191a;
+    --sidebar-color: #242526;
+    --primary-color: #3a3b3c;
+    --primary-color-light: #3a3b3c;
+    --toggle-color: #fff;
+    --text-color: #ccc;
+}
+
+
+/* ===== Sidebar ===== */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    padding: 10px 14px;
+    background: var(--sidebar-color);
+    transition: var(--tran-05);
+    z-index: 100;
+}
+
+.sidebar2 {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 250px;
+    padding: 10px 14px;
+    background: var(--sidebar-color);
+    transition: var(--tran-05);
+    z-index: 100;
+}
+
+.sidebar.close {
+    width: 88px;
+}
+
+
+/* ===== Reusable code - Here ===== */
+
+.sidebar li {
+    height: 50px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.sidebar header .image,
+.sidebar .icon {
+    min-width: 60px;
+    border-radius: 6px;
+}
+
+.sidebar .icon {
+    min-width: 60px;
+    border-radius: 6px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.sidebar .text,
+.sidebar .icon {
+    color: var(--text-color);
+    transition: var(--tran-03);
+}
+
+.sidebar .text {
+    font-size: 17px;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 1;
+}
+
+.sidebar.close .text {
+    opacity: 0;
+}
+
+
+/* =========================== */
+
+.sidebar header {
+    position: relative;
+}
+
+.sidebar header .image-text {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar header .logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+header .image-text .name {
+    margin-top: 2px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+header .image-text .profession {
+    font-size: 16px;
+    margin-top: -2px;
+    display: block;
+}
+
+.sidebar header .image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar header .image img {
+    width: 40px;
+    border-radius: 6px;
+}
+
+.sidebar header .toggle {
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    transform: translateY(-50%) rotate(180deg);
+    height: 25px;
+    width: 25px;
+    background-color: var(--primary-color);
+    color: var(--sidebar-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    cursor: pointer;
+    transition: var(--tran-05);
+}
+
+body.dark .sidebar header .toggle {
+    color: white;
+}
+
+.sidebar.close .toggle {
+    transform: translateY(-50%) rotate(0deg);
+}
+
+.sidebar .menu {
+    margin-top: 40px;
+}
+
+.sidebar li.search-box {
+    border-radius: 6px;
+    background-color: var(--primary-color-light);
+    cursor: pointer;
+    transition: var(--tran-05);
+}
+
+.sidebar li.search-box input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: var(--primary-color-light);
+    color: var(--text-color);
+    border-radius: 6px;
+    font-size: 17px;
+    font-weight: 500;
+    transition: var(--tran-05);
+}
+
+.sidebar li a {
+    list-style: none;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: var(--tran-03);
+}
+
+.sidebar li a:hover {
+    background-color: var(--primary-color);
+}
+
+.sidebar li a:hover .icon,
+.sidebar li a:hover .text {
+    color: white;
+}
+
+body.dark .sidebar li a:hover .icon,
+body.dark .sidebar li a:hover .text {
+    color: var(--text-color);
+}
+
+.sidebar .menu-bar {
+    height: calc(100% - 55px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: scroll;
+}
+
+.menu-bar::-webkit-scrollbar {
+    display: none;
+}
+
+.sidebar .menu-bar .mode {
+    border-radius: 6px;
+    background-color: var(--primary-color-light);
+    position: relative;
+    transition: var(--tran-05);
+}
+
+.menu-bar .mode .sun-moon {
+    height: 50px;
+    width: 60px;
+}
+
+.mode .sun-moon i {
+    position: absolute;
+}
+
+.mode .sun-moon i.sun {
+    opacity: 0;
+}
+
+body.dark .mode .sun-moon i.sun {
+    opacity: 1;
+}
+
+body.dark .mode .sun-moon i.moon {
+    opacity: 0;
+}
+
+.menu-bar .bottom-content .toggle-switch {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.toggle-switch .switch {
+    position: relative;
+    height: 22px;
+    width: 40px;
+    border-radius: 25px;
+    background-color: var(--toggle-color);
+    transition: var(--tran-05);
+}
+
+.switch::before {
+    content: '';
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    background-color: var(--sidebar-color);
+    transition: var(--tran-04);
+}
+
+body.dark .switch::before {
+    left: 20px;
+}
+
+.home {
+    position: absolute;
+    top: 0;
+    top: 0;
+    left: 250px;
+    height: 100vh;
+    width: calc(100% - 250px);
+    background-color: var(--body-color);
+    transition: var(--tran-05);
+}
+
+.home .text {
+    font-size: 30px;
+    font-weight: 500;
+    color: black;
+    padding: 12px 60px;
+}
+
+.sidebar.close~.home {
+    left: 78px;
+    height: 100vh;
+    width: calc(100% - 78px);
+}
+
+body.dark .home .text {
+    color: var(--text-color);
+}
+
+
+/* ..............................................dashboard............................... */
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin-left: 260px;
+    font-size: 20px;
+    width: 700px;
+}
+
+input[type="text"] {
+    margin-left: 120px;
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 40px;
+}
+
+.search {
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+
+
+/* .............................................articles............................... */
+
+.menu2 ul {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    color: black;
+    margin-left: 150px;
+    justify-content: space-between;
+    width: 55%;
+}
+
+.add {
+    margin-top: 10px;
+    margin-left: 300px;
+    padding: 10px;
+    background-color: black;
+    color: white;
+}
+
+div input[type="text"] {
+    width: 20%;
+}
+
+hr {
+    width: 60%;
+    margin-left: 110px;
+}
+
+.edit {
+    margin-left: 20px;
+}
+
+.search {
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+
+li button {
+    padding: 10px;
+    color: white;
+}
+
+.comments {
+    margin-left: 300px;
+    width: 55%;
+}
+
+li {
+    list-style: none;
+}
+
+
+/* .........................form.................. */
+
+.new input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical
+}
+
+form button {
+    background-color: black;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    align-items: center;
+    margin-left: 200px;
+}
+
+form button:hover {
+    align-items: center;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+input[type=submit] {
+    margin-left: 200px;
+}
+
+.form {
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #E5E5E5;
+    padding: 20px;
+    width: 50%;
+    margin-left: 150px;
+}
+
+.new input[type=text] {
+    margin-left: -1px;
+}
+
+@media (min-width: 322px) and (max-width:400px) {
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    .sidebar2 {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 250px;
+        padding: 10px 14px;
+        background: var(--sidebar-color);
+        transition: var(--tran-05);
+        z-index: 100;
+    }
+    .home .text {
+        font-size: 20px;
+        font-weight: 500;
+        color: black;
+        padding: 10px 40px;
+        margin: auto;
+    }
+    input[type="text"] {
+        width: 40%;
+        padding: 5px;
+        margin-left: 20px;
+    }
+    .search {
+        background-color: black;
+        color: white;
+        padding: 5px;
+    }
+    table,
+    th,
+    td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        margin-left: 30px;
+        font-size: 20px;
+        width: 500px;
+        padding: 10px;
+    }
+    /* .............................................articles............................... */
+    .menu2 ul {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        color: black;
+        margin-left: 15px;
+        justify-content: space-between;
+        width: 55%;
+    }
+    .add {
+        margin-top: 10px;
+        margin-left: 80px;
+        padding: 5px;
+        background-color: black;
+        color: white;
+        margin-bottom: 10px;
+    }
+    div input[type="text"] {
+        width: 50%;
+        margin-left: 30px;
+    }
+    hr {
+        width: 90%;
+        margin-left: 15px;
+    }
+    .edit {
+        margin-left: 10px;
+    }
+    .search {
+        background-color: black;
+        color: white;
+        padding: 5px;
+    }
+    li button {
+        padding: 10px;
+        color: white;
+    }
+    .comments {
+        margin-left: 300px;
+        width: 55%;
+    }
+    li {
+        list-style: none;
+    }
+    .phones {
+        display: none;
+    }
+    .sidebar header .toggle {
+        display: none;
+    }
+}

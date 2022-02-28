@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dash.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Dashboard </title>
+</head>
+
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="../images/218005602.jpg" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name"><h4><b id="first_name"></b> <b id="last_name"></b></h4></span>
+                    <span class="profession" id="email"></span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <ul class="menu-links">
+                    <li class="nav-link ">
+                        <a href="./dashboard.html">
+                            <i class='bx bx-home-alt icon'></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="./articles.html">
+                            <i class='bx bxl-blogger icon'></i>
+                            <span class="text nav-text">Articles</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="./users.html">
+                            <i class='bx bx-user-pin icon'></i>
+                            <span class="text nav-text">Users</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="./comments.html">
+                            <i class='bx bx-message-dots icon'></i>
+                            <span class="text nav-text">comments</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link active">
+                        <a href="./subscribers.html">
+                            <i class='bx bx-pie-chart-alt icon'></i>
+                            <span class="text nav-text">Subscribes</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="./questions.html">
+                            <i class='bx bx-question-mark icon'></i>
+                            <span class="text nav-text">Queries/Question</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="../index.html">
+                        <i class='bx bx-log-out icon'></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+
+            </div>
+        </div>
+
+    </nav>
+    <div class="sidebar2"></div>
+
+    <section class="home">
+        <div class="text">Subscribers</div>
+        <div class="menu2  phones">
+            <ul>
+                <li>Subscribers <br><input type="checkbox">Unsubscribe All</li>
+                <li>Email</li>
+                <li>Date</li>
+                <li>ID</li>
+            </ul>
+            <hr>
+        </div>
+        <div class="menu2">
+            <ul>
+
+                <li>arthur junior<br><input type="checkbox">Unsubscribe</li>
+                <li>Another@gmail.com</li>
+                <li style="margin-right: 50px;">02-02-2022</li>
+                <li>1</li>
+            </ul>
+            <hr>
+            <ul>
+                <li>arthur junior<br><input type="checkbox">Unsubscribe</li>
+                <li>Another@gmail.com</li>
+                <li style="margin-right: 50px;">02-02-2022</li>
+                <li>2</li>
+            </ul>
+            <hr>
+            <ul>
+                <li>arthur junior<br><input type="checkbox">Unsubscribe</li>
+                <li>Another@gmail.com</li>
+                <li style="margin-right: 50px;">02-02-2022</li>
+                <li>3</li>
+            </ul>
+            <hr>
+            <ul>
+                <li>arthur junior<br><input type="checkbox">Unsubscribe</li>
+                <li>Another@gmail.com</li>
+                <li style="margin-right: 50px;">02-02-2022</li>
+                <li>4</li>
+            </ul>
+            <hr>
+            <ul>
+                <li>arthur junior<br><input type="checkbox">Unsubscribe</li>
+                <li>Another@gmail.com</li>
+                <li style="margin-right: 50px;">02-02-2022</li>
+                <li>5</li>
+            </ul>
+            <hr>
+            <ul>
+                <li>arthur junior<br><input type="checkbox">Unsubscribe</li>
+                <li>Another@gmail.com</li>
+                <li style="margin-right: 50px;">02-02-2022</li>
+                <li>6</li>
+            </ul>
+            <hr>
+            <ul>
+                <li>arthur junior<br><input type="checkbox">Unsubscribe</li>
+                <li>Another@gmail.com</li>
+                <li style="margin-right: 50px;">02-02-2022</li>
+                <li>7</li>
+            </ul>
+            <hr>
+        </div>
+    </section>
+
+    <script>
+        async function getProfile() {
+            let user = localStorage.getItem('user');
+            if (!user) return window.location.href = "./index.html";
+            user = JSON.parse(user);
+
+
+            document.getElementById('first_name').innerHTML = "Arthur";
+            document.getElementById('last_name').innerHTML = "Junior";
+            document.getElementById('email').innerHTML = user.email;
+
+            const citiesRef = db.collection('users');
+            const snapshot = await citiesRef.where('email', '==', user.email).get();;
+            if (snapshot.empty) {
+                console.log('No matching documents.');
+                return;
+            }
+
+            snapshot.forEach(doc => {
+                console.log(JSON.stringify(doc.data()));
+            });
+        }
+        getProfile();
+    </script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js "></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js "></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js "></script>
+    <script src="./scripts/firebase.js "></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

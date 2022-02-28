@@ -250,3 +250,5 @@
     .new input[type=text] {
         margin-left: -1px;
     }
+    
+    @media (min-width: 322px) and (max-width:399px) {}

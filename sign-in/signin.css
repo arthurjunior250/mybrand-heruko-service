@@ -116,7 +116,7 @@ input[type="button"] {
     background-color: #2965F1;
 }
 
-@media (min-width: 322px) and (max-width:415px) {
+@media (min-width: 322px) and (max-width:399px) {
     .brand img {
         width: 55px;
         height: 53px;
@@ -128,14 +128,14 @@ input[type="button"] {
         margin-top: -1px;
     }
     .login {
-        border-radius: 20px;
         width: 250px;
         overflow: hidden;
         margin: 0 auto;
         padding: 80px;
+        padding: 80px;
         background: white;
         height: 350px;
-        margin-top: 20px;
+        margin-top: 30px;
     }
     h2 {
         color: black;
@@ -188,7 +188,9 @@ input[type="button"] {
         padding: 10px 20px;
     }
     input[type="button"] {
-        margin-left: -100px;
+        margin-left: auto;
+        margin-right: auto;
+        display: table;
         background-color: #2965F1;
     }
     .footer {
@@ -201,4 +203,14 @@ input[type="button"] {
         margin-left: -65px;
         font-size: 10px;
     }
+    nav {
+        background-image: url(../images/concrete_wall.png);
+        color: white;
+        position: sticky;
+        top: 0;
+        width: 100%;
+        z-index: 100;
+    }
 }
+
+@media (min-width:400px) and (max-width:500px) {}

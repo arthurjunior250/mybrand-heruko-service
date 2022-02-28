@@ -1,4 +1,3 @@
-// @ts-nocheck
 db.collection("blogs")
     .orderBy("timestamp", "desc")
     .onSnapshot((blog) => {
