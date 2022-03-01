@@ -411,7 +411,7 @@ li button {
 }
 
 .comments {
-    margin-left: 300px;
+    margin-left: 120px;
     width: 55%;
 }
 
@@ -610,5 +610,9 @@ input[type=submit] {
     }
     .new input[type=text] {
         margin-left: -1px;
+    }
+    .comments {
+        margin-left: 20px;
+        width: 80%;
     }
 }

@@ -157,9 +157,9 @@
             </div>
         </section>
 
-        <div class="text-center clicked">
+        <!-- <div class="text-center clicked">
             <img src="./images/next.png" alt="next" srcset="" class="next">
-        </div>
+        </div> -->
         <!-- ........................................................modal ...................................................-->
 
         <!-- The Modal -->
@@ -268,7 +268,7 @@
                                 overflow: hidden;
                                 background: none!important;
                                 height: 253px;
-                                width: 383px;
+                                width: 380px;
                             }
                         </style>
                     </div>
@@ -293,8 +293,8 @@
                 </div>
                 <div class="newsletter">
                     <p>Subscribe to my newsletter</p>
-                    <input type="text" placeholder="Enter Your Email.." required=""><br>
-                    <button>Subscribe!</button>
+                    <input type="text" placeholder="Enter Your Email.." required="" id="body-email" onkeyup='validateE()'><br>
+                    <button id="sub" onclick='return validatesub()'>Subscribe!</button>
                 </div>
             </div>
             <p>©COPYRIGHT ARTHURJUNIOR250. ALL RIGHT RESERVED </p>
@@ -316,6 +316,8 @@
     <script defer src="./validation.js"></script>
     <script defer src="./form.js"></script>
     <script defer src="./showBlogs.js"></script>
+    <script src="./subscribes.js"></script>
+    <script src="./validatesub.js"></script>
 
 
 

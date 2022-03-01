@@ -49,6 +49,8 @@ const createContact = (event) => {
             Name: fullname.value,
             Email: email.value,
             Message: message.value,
+            CreatedAt: Date.now(),
+            timestamp: firebase.firestore.FieldValue.serverTimestamp(),
         })
         .then((message) => {
             console.log(message)

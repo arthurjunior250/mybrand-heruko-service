@@ -1,4 +1,4 @@
-db.collection("blogs")
+db.collection("subscriber")
     .orderBy("timestamp", "desc")
     .onSnapshot((blog) => {
         const data = blog.docs.map((doc) => ({ id: doc.id, data: doc.data() }))
@@ -10,12 +10,12 @@ db.collection("blogs")
                 `
         
           <ul>
+          <li>subscriber info</li>
+          <li>${blog.data.Email}</li>
           <li>${moment(blog.data.CreatedAt).fromNow()}</li>
-          <li>Published</li>
-          <li id="Title">${blog.data.Title}</li>
           <li><button style="background-color: black;" id="delete__btn" onclick="deleteBlog('${
             blog.id
-          }')">Delete</button><button style="background-color:black;" class="edit">Edit</button></li>
+          }')">Unsubscribe</button></li>
       </ul>
       <hr>
 `
@@ -33,7 +33,7 @@ function getBlogId(id) {
 
 function getBlogToUpdate(id) {
     localStorage.setItem("blogToUpdate", JSON.stringify({ id }))
-    db.collection("blogs")
+    db.collection("subscriber")
         .doc(id)
         .get()
         .then((doc) => {
@@ -112,7 +112,7 @@ function getBlogToUpdate(id) {
 // DELETING A BLOG
 
 function deleteBlog(id) {
-    db.collection("blogs")
+    db.collection("subscriber")
         .doc(id)
         .delete()
         .then(() => {

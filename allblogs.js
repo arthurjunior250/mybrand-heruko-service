@@ -13,7 +13,7 @@ db.collection("blogs")
           <a href="../blogs/blog.html" onclick="getBlogId('${blog.id}')">
           <h1>${blog.data.Title}</h1>
           </a>
-          <p>${blog.data.Blog}</p>
+          <p>${blog.data.Blog.substr(0,150)}</p>
 
           <div class="emoji1">
               <img src="../images/comment.png" alt="" srcset="">
