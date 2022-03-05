@@ -895,3 +895,30 @@
          margin-left: -30px;
      }
  }
+ 
+ @media (max-width:330px) {
+     .form {
+         border-radius: 5px;
+         background-color: #f2f2f2;
+         padding: 20px;
+         width: 80%;
+         margin-left: 20px;
+     }
+     .contact-me {
+         text-align: center;
+         color: black;
+         margin-top: 50px;
+         margin-bottom: 20px;
+         margin-left: -60px;
+     }
+     .map {
+         margin-left: -28px;
+     }
+     #hero {
+         width: 100%;
+         background-color: rgba(0, 0, 0, 0.8);
+         margin-left: -387px;
+         margin-top: 310px;
+         width: 300px;
+     }
+ }

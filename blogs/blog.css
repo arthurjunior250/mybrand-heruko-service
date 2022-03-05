@@ -442,13 +442,10 @@ html {
 
 @media (min-width: 322px) and (max-width:415px) {
     .blog-pic img {
-        margin-top: 100px;
+        margin-top: 40px;
         width: 300px;
         height: 200px;
-        margin-left: 10px;
-    }
-    .blog-pic p {
-        margin-left: 10px;
+        margin-left: 20px;
     }
     .blog-info h1 {
         margin-top: 40px;
@@ -490,6 +487,7 @@ html {
         border: none;
         border-radius: 4px;
         cursor: pointer;
+        margin: auto;
     }
     input[type=submit]:hover {
         align-items: center;
@@ -568,7 +566,7 @@ html {
         font-size: 15px;
     }
     .blog-pic img {
-        width: 380px;
+        width: 290px;
     }
     .comments img {
         width: 19%;
