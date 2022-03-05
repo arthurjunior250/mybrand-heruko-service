@@ -2,7 +2,7 @@
  
  @media (min-width: 768px) and (max-width: 900px) {
      .container {
-         width: 900px;
+         /* width: 500px; */
          max-width: 100%;
          margin: 0 auto;
      }

@@ -6,6 +6,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.phone {
+    display: none;
+}
+
 :root {
     /* ===== Colors ===== */
     --body-color: white;
@@ -471,6 +475,9 @@ input[type=submit] {
 }
 
 @media (min-width: 322px) and (max-width:400px) {
+    .phone {
+        display: contents;
+    }
     html,
     body {
         width: 100%;

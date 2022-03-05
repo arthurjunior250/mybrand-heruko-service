@@ -69,9 +69,9 @@ db.collection("formData")
                 `
         
           <ul>
-          <li>${blog.data.Name}</li>
-          <li>${blog.data.Email}</li>
-          <li>${blog.data.Message}</li>
+          <li><strong class='phone'>Name: </strong>${blog.data.Name}</li>
+          <li><strong class='phone'>Email: </strong>${blog.data.Email}</li>
+          <li><strong class='phone'>Message: </strong>${blog.data.Message}</li>
           <li><button style="background-color: black;" id="delete__btn" onclick="deleteBlog('${
             blog.id
           }')">Delete</button></li>

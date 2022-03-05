@@ -11,8 +11,8 @@ db.collection("subscriber")
         
           <ul>
           <li>subscriber info</li>
-          <li>${blog.data.Email}</li>
-          <li>${moment(blog.data.CreatedAt).fromNow()}</li>
+          <li><strong class='phone'>Email: </strong>${blog.data.Email}</li>
+          <li><strong class='phone'>Time: </strong>${moment(blog.data.CreatedAt).fromNow()}</li>
           <li><button style="background-color: black;" id="delete__btn" onclick="deleteBlog('${
             blog.id
           }')">Unsubscribe</button></li>

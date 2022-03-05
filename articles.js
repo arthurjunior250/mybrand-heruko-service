@@ -10,9 +10,9 @@ db.collection("blogs")
                 `
         
           <ul>
-          <li>${moment(blog.data.CreatedAt).fromNow()}</li>
-          <li>Published</li>
-          <li id="Title">${blog.data.Title}</li>
+          <li><strong class='phone'>Time: </strong>${moment(blog.data.CreatedAt).fromNow()}</li>
+          <li><strong class='phone'>Status: </strong>Published</li>
+          <li id="Title"><strong class='phone'>Title: </strong>${blog.data.Title}</li>
           <li><button style="background-color: black;" id="delete__btn" onclick="deleteBlog('${
             blog.id
           }')">Delete</button><button style="background-color:black;" class="edit">Edit</button></li>

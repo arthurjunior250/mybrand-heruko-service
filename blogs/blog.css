@@ -441,11 +441,14 @@ html {
 }
 
 @media (min-width: 322px) and (max-width:415px) {
+    .blog-pic p {
+        text-align: center;
+    }
     .blog-pic img {
         margin-top: 40px;
         width: 300px;
         height: 200px;
-        margin-left: 20px;
+        margin-left: 40px;
     }
     .blog-info h1 {
         margin-top: 40px;
@@ -515,7 +518,6 @@ html {
         align-items: center;
     }
     .footer {
-        margin-top: -40px;
         background-color: black;
     }
     .location {
@@ -564,9 +566,6 @@ html {
     }
     h1 {
         font-size: 15px;
-    }
-    .blog-pic img {
-        width: 290px;
     }
     .comments img {
         width: 19%;
