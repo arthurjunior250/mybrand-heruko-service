@@ -623,3 +623,9 @@ input[type=submit] {
         width: 80%;
     }
 }
+
+@media (max-width: 800px) {
+    .sidebar2 {
+        display: none;
+    }
+}
