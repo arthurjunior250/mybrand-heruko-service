@@ -5,6 +5,20 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+header a{
+    text-decoration: none;
+}
+.user-info{
+  margin-right: 300px;
+  
+}
+#delete__btn{
+    margin-bottom: 20px;
+}
+#user-img{
+    border-radius: 20%;
+    width: 20%;
+}
 
 .phone {
     display: none;

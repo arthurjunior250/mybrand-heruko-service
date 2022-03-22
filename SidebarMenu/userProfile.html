@@ -14,7 +14,6 @@
 <body>
     <nav class="sidebar close">
         <header>
-            <a href="./userProfile.html">
             <div class="image-text">
                 <span class="image">
                     <img src="../images/218005602.jpg" alt="">
@@ -25,7 +24,7 @@
                     <span class="profession" id="email" style="font-size: 11px;"></span>
                 </div>
             </div>
-</a>
+
             <i class='bx bx-chevron-right toggle'></i>
         </header>
 
@@ -33,13 +32,13 @@
             <div class="menu">
 
                 <ul class="menu-links">
-                    <li class="nav-link ">
+                    <li class="nav-link">
                         <a href="./dashboard.html">
                             <i class='bx bx-home-alt icon'></i>
                             <span class="text nav-text">Dashboard</span>
                         </a>
                     </li>
-                    <li class="nav-link active">
+                    <li class="nav-link">
                         <a href="./articles.html">
                             <i class='bx bxl-blogger icon'></i>
                             <span class="text nav-text">Articles</span>
@@ -85,32 +84,21 @@
     <div class="sidebar2"></div>
 
     <section class="home">
-        <div class="text">Article</div>
-        <div class="head">
-            <a href="./newarticle.html"><button class="add">Add Article</button></a>
-            <input type="text" placeholder="Search">
-            <button class="search">Search</button>
-        </div>
-        <div class="menu2 phones">
-            <ul>
-                <li>Date</li>
-                <li>Status</li>
-                <li>Titles</li>
-                <li>Action</li>
-            </ul>
-            <hr>
-        </div>
-        <div class="menu2" id="arts">
-            <img style="width:40%; text-align: center;" src="https://c.tenor.com/tEBoZu1ISJ8AAAAC/spinning-loading.gif" alt="spinner">
-        </div>
+        <div class="text">User Profile</div>
+        <div class="user-info" style="text-align: center;">
+       
+       <div>
+           <img src="../images/218005602.jpg" alt="" srcset="" id="user-img">
+       </div>
+       <div >
+          <p>Role</p><h4 id="role-info">admin</h4>
+          <p>Email</p> <h4 id="email-info">email@gmail.com</h4>
+       </div>
+    </div>
+          
     </section>
-
-
-  
     <script src="script.js"></script>
-    <script src="../configuration.js"></script>
-    <script src="../articles.js"></script>
-    <script src="../userProfile.js"></script>
+    <script src="../userinfo.js"></script>
 
 </body>
 

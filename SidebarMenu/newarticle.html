@@ -13,18 +13,20 @@
 
 <body>
     <nav class="sidebar close">
+   
         <header>
+            <a href="./userProfile.html">
             <div class="image-text">
                 <span class="image">
                     <img src="../images/218005602.jpg" alt="">
                 </span>
 
                 <div class="text logo-text">
-                    <span class="name"><h4><b id="first_name"></b> <b id="last_name"></b></h4></span>
-                    <span class="profession" id="email"></span>
+                    <span class="name"><h4><b id="first_name">Arthur</b> <b id="last_name">Junior</b></h4></span>
+                    <span class="profession" id="email" style="font-size: 11px;"></span>
                 </div>
             </div>
-
+        </a>>
             <i class='bx bx-chevron-right toggle'></i>
         </header>
 
@@ -51,14 +53,6 @@
                             <span class="text nav-text">Users</span>
                         </a>
                     </li>
-
-                    <!-- <li class="nav-link">
-                        <a href="./comments.html">
-                            <i class='bx bx-message-dots icon'></i>
-                            <span class="text nav-text">comments</span>
-                        </a>
-                    </li> -->
-
                     <li class="nav-link">
                         <a href="./subscribers.html">
                             <i class='bx bx-pie-chart-alt icon'></i>
@@ -78,10 +72,10 @@
 
             <div class="bottom-content">
                 <li class="">
-                    <a href="../index.html">
+                    <div onclick="logout()">
                         <i class='bx bx-log-out icon'></i>
-                        <span class="text nav-text">Logout</span>
-                    </a>
+                        <span class="text nav-text" >Logout</span>
+                    </div>
                 </li>
 
             </div>
@@ -151,6 +145,7 @@
     <script defer src="../comment.js"></script>
     <script defer src="../createblogs.js"></script>
     <script src="script.js"></script>
+    <script src="../userProfile.js"></script>
 
 </body>
 

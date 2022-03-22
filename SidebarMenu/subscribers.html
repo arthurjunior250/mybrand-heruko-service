@@ -14,16 +14,18 @@
 <body>
     <nav class="sidebar close">
         <header>
+            <a href="./userProfile.html">
             <div class="image-text">
                 <span class="image">
                     <img src="../images/218005602.jpg" alt="">
                 </span>
 
                 <div class="text logo-text">
-                    <span class="name"><h4><b id="first_name"></b> <b id="last_name"></b></h4></span>
-                    <span class="profession" id="email"></span>
+                    <span class="name"><h4><b id="first_name">Arthur</b> <b id="last_name">Junior</b></h4></span>
+                    <span class="profession" id="email" style="font-size: 11px;"></span>
                 </div>
             </div>
+            </a>
 
             <i class='bx bx-chevron-right toggle'></i>
         </header>
@@ -52,13 +54,6 @@
                         </a>
                     </li>
 
-                    <!-- <li class="nav-link">
-                        <a href="./comments.html">
-                            <i class='bx bx-message-dots icon'></i>
-                            <span class="text nav-text">comments</span>
-                        </a>
-                    </li> -->
-
                     <li class="nav-link active">
                         <a href="./subscribers.html">
                             <i class='bx bx-pie-chart-alt icon'></i>
@@ -78,10 +73,10 @@
 
             <div class="bottom-content">
                 <li class="">
-                    <a href="../index.html">
+                    <div onclick="logout()">
                         <i class='bx bx-log-out icon'></i>
-                        <span class="text nav-text">Logout</span>
-                    </a>
+                        <span class="text nav-text" >Logout</span>
+                    </div>
                 </li>
 
             </div>
@@ -94,52 +89,22 @@
         <div class="text">Subscribers</div>
         <div class="menu2  phones">
             <ul>
-                <li>Subscribers <br><input type="checkbox">Unsubscribe All</li>
-                <li>Email</li>
-                <li>Time</li>
+                <li>Subscribers:Email <br><input type="checkbox">Unsubscribe All</li>
                 <li>Action</li>
             </ul>
             <hr>
         </div>
 
         <div class="menu2" id="arts">
-
+            <img style="width:40%; text-align: center;" src="https://c.tenor.com/tEBoZu1ISJ8AAAAC/spinning-loading.gif" alt="spinner">
         </div>
     </section>
 
-    <script>
-        async function getProfile() {
-            let user = localStorage.getItem('user');
-            if (!user) return window.location.href = "./index.html";
-            user = JSON.parse(user);
-
-
-            document.getElementById('first_name').innerHTML = "Arthur";
-            document.getElementById('last_name').innerHTML = "Junior";
-            document.getElementById('email').innerHTML = user.email;
-
-            const citiesRef = db.collection('users');
-            const snapshot = await citiesRef.where('email', '==', user.email).get();;
-            if (snapshot.empty) {
-                console.log('No matching documents.');
-                return;
-            }
-
-            snapshot.forEach(doc => {
-                console.log(JSON.stringify(doc.data()));
-            });
-        }
-        getProfile();
-    </script>
-
-    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js "></script>
-    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js "></script>
-    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js "></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-    <script src="./scripts/firebase.js "></script>
     <script src="script.js"></script>
-    <script src="../configuration.js"></script>
-    <script src="../users.js"></script>
+    <script src="../getAllsubscriber.js"></script>
+    <script src="../userProfile.js"></script>
+
+    
 
 </body>
 
