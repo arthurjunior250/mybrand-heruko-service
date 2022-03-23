@@ -32,12 +32,3 @@ const getBlogs = async() => {
 }
 getBlogs();
 
-
-
-
-//   document.querySelector(".readMore").addEventListener("click",(e)=>{
-//     e.preventDefault()
-//     localStorage.setItem("token", response?.id);
-//    })
-
-
