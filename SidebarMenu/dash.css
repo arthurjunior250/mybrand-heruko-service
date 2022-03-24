@@ -5,6 +5,9 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+hr{
+    box-shadow: -1px -1px 10px 0px #000 ;
+}
 header a{
     text-decoration: none;
 }
@@ -489,6 +492,11 @@ input[type=submit] {
 }
 
 @media (min-width: 322px) and (max-width:400px) {
+    .user-info{
+        margin-left: auto;
+        margin-right: auto;
+        display: table;
+    }
     .phone {
         display: contents;
     }

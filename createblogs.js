@@ -23,10 +23,16 @@ const token =localStorage.getItem('token');
     }
   )
     .then((response) => {
-
+alert("blog created")
       console.log(response);
     })
     .catch((error) => {
       console.log(error);
     });
 });
+
+
+function logout(){
+	localStorage.clear();
+	location.href="../sign-in/signin.html"
+}

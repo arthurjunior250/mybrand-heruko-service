@@ -14,7 +14,7 @@ const getBlogs = async() => {
                     `
       <div class="blog-sect">
                <img src=${res?.image} alt="blog">
-        <a href="./blogs/blog.html" onclick="getBlogId('${res._id}')">
+            <a href="./blog.html?${res._id}" class="readMore">
         <h1> ${res?.title}</h1>
         </a>
        <p> ${res?.description?.slice(1,200)}</p>

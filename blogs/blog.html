@@ -51,51 +51,23 @@
         <p id="blogdescription"></p>
      
         <hr />
-        <h1>COMMENTS</h1>
+        <h1 style="display: flex;" id="no">COMMENTS:<p id="nofc"></p></h1>
         <div class="comments">
-          <img src="../images/218005602.jpg" alt=" " srcset="" />
-          <div class="comment1">
-            <h1>ARTHUR JUNIOR,</h1>
-            <p>09-FEB-2022</p>
-
-            <p class="lorem">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dolor
-              platea magna nunc pretium nulla condimentum. Habitasse sed nisl
-              imperdiet semper libero, leo, sapien. In consectetur lacus
-              sagittis aliquam. Aenean felis et cursus mi, neque pharetra.
-            </p>
-          </div>
+    
         </div>
       </div>
-      <hr />
       <h1 class="leave">LEAVE A COMMENT</h1>
       <div class="form">
         <form>
-          <input
-            type="text"
-            placeholder="Enter Your name.."
-            id="contact-name"
-            required
-            onkeyup="validateName()"
-          />
-          <span class="error-message" id="name-error"></span>
-          <input
-            type="text"
-            placeholder="Enter Your Email.."
-            id="contact-email"
-            required
-            onkeyup="validateEmail()"
-          />
-          <span class="error-message" id="email-error"></span>
+          
           <textarea
             placeholder="Enter Your Comments.."
             style="height: 200px"
             id="contact-message"
-            onkeyup="validateMessage()"
             required
           ></textarea>
           <span class="error-message" id="message-error"></span>
-          <input type="submit" value="Submit" onclick="validateForm()" />
+          <input type="submit" value="Submit" id="send"/>
           <span class="error-message" id="submit-error"></span>
         </form>
       </div>
@@ -127,34 +99,11 @@
             </section>
 
             <script defer src="../app.js"></script>
-            <!-- <script
-      defer
-      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
-    ></script>
-    <script
-      defer
-      src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"
-    ></script>
-    <script
-      defer
-      src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"
-    ></script>
-    <script
-      defer
-      src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js"
-    ></script>
-    <script
-      defer
-      src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"
-    ></script>
-    <script
-      defer
-      src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js" -->
-            <!-- ></script> -->
+         
             <script defer src="../validation.js"></script>
-            <!-- <script defer src="./../configuration.js"></script> -->
+
             <script defer src="./../singleBlog.js"></script>
-            <!-- <script src="./../showBlogs.js"></script> -->
+
 </body>
 
 </html>

@@ -43,6 +43,7 @@ fetch(`https://my-brand-endpoints.herokuapp.com/api/v1/inquiry/${id}`, {
 })
 .then(function (response) {
     alert("Query Deleted")
+    location.reload();
       console.log(response);
    })
 }
