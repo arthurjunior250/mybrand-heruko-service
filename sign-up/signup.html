@@ -30,11 +30,13 @@
                         <label><b>User Name     
                 </b>    
                 </label>
-                        <input type="text" name="Uname" id="Uname" placeholder="Username" required="">
+                        <input type="text" name="Uname" id="Uname" placeholder="Username" required="" onkeyup="validateName()">
+                        <span class='error-message' id='name-error'></span>
                         <br><br>
                         <label><b>Email  
                         </b> <br>  
-                        <input type="text" name="Uemail" id="email" placeholder="Email" required="">
+                        <input type="text" name="Uemail" id="email" placeholder="Email" required="" onkeyup='validateEmail()'>
+                         <span class='error-message' id='email-error'></span>
                         <br><br>
                         <label><b>Password     
                 </b>    
@@ -52,6 +54,8 @@
         <p>©COPYRIGHT ARTHURJUNIOR250. ALL RIGHT RESERVED </p>
     </main>
     <script src="./signup.js"></script>
+    <script src="./emailValidation.js"></script>
+  
 </body>
 
 </html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dash.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Dashboard </title>
+</head>
+
+<body>
+    <nav class="sidebar close">
+   
+        <header>
+            <a href="./userProfile.html">
+            <div class="image-text">
+                <span class="image">
+                    <img src="../images/218005602.jpg" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name"><h4><b id="first_name">Arthur</b> <b id="last_name">Junior</b></h4></span>
+                    <span class="profession" id="email" style="font-size: 11px;"></span>
+                </div>
+            </div>
+        </a>
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <ul class="menu-links">
+                    <li class="nav-link ">
+                        <a href="./dashboard.html">
+                            <i class='bx bx-home-alt icon'></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="./articles.html">
+                            <i class='bx bxl-blogger icon'></i>
+                            <span class="text nav-text">Articles</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="./users.html">
+                            <i class='bx bx-user-pin icon'></i>
+                            <span class="text nav-text">Users</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="./subscribers.html">
+                            <i class='bx bx-pie-chart-alt icon'></i>
+                            <span class="text nav-text">Subscribes</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="./questions.html">
+                            <i class='bx bx-question-mark icon'></i>
+                            <span class="text nav-text">Queries/Question</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <div onclick="logout()">
+                        <i class='bx bx-log-out icon'></i>
+                        <span class="text nav-text" >Logout</span>
+                    </div>
+                </li>
+
+            </div>
+        </div>
+
+    </nav>
+    <div class="sidebar2"></div>
+
+    <section class="home">
+        <div class="text">Update Article</div>
+        <div class="menu2">
+            <div class="form">
+                <form class="new">
+                    <input type="file" id="imaging" />
+                    <input type="text" id="DataID" value="Arthur"> 
+                    <input type="text" placeholder="Title..." required="" id="title-name">
+
+
+                    <textarea placeholder="body.." style="height:200px" required="" id='body-message'></textarea>
+
+
+                    <button type="submit" id="create" onclick="updateArticle()">Update Article</button>
+
+
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+    <script src="../userProfile.js"></script>
+    <script src="../updateArticle.js"></script>
+
+</body>
+
+</html>
