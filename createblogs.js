@@ -12,7 +12,7 @@ const token =localStorage.getItem('token');
     {
       method: "POST",
       body: JSON.stringify({
-        image: image.value,
+        image: image.files[0],
         title: title.value,
         description:description.value,
       }),
@@ -23,11 +23,19 @@ const token =localStorage.getItem('token');
     }
   )
     .then((response) => {
-alert("blog created")
+      swal({
+        title: "Good Job!",
+        text: "Article Created",
+        icon: "success",
+        button: "OK!",
+      }).then(() => {
+        location.reload();
+       });
+      
       console.log(response);
     })
     .catch((error) => {
-      console.log(error);
+      swal("Error", response.message, "error");
     });
 });
 

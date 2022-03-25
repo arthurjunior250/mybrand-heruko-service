@@ -22,11 +22,17 @@ btnContact.addEventListener("click", (e) => {
     }
   )
     .then((response) => {
-      // console.log("Success")
       console.log(response);
-     alert('message sent')
+      swal({
+        title: "Good job!",
+        text: "Message Sent!",
+        icon: "success",
+        button: "Ok!",
+      }).then(() => {
+        location.reload();
+       });
     })
     .catch((error) => {
-      console.log(error);
+      swal("Error", response.message, "error");
     });
 });

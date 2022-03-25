@@ -16,3 +16,13 @@ function checkAuthUser() {
 	}
 }
 checkAuthUser();
+
+
+function login(){
+	swal({
+        title: "Good job!",
+        text: "You are successfully logged in!",
+        icon: "success",
+        button: "OK!",
+      });
+}

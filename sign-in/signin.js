@@ -27,21 +27,36 @@ logginBtn.addEventListener("click", async(e) => {
                 localStorage.setItem("token", response?.token);
                 localStorage.setItem("user", JSON.stringify(response));
                 console.log(response?.token)
-                location.href = "../SidebarMenu/dashboard.html";
+                swal({
+                    title: "Good Job!",
+                    text: "You are successfully logged in",
+                    icon: "success",
+                    button: "OK!",
+                  }).then(() => {
+                    location.href = "../SidebarMenu/dashboard.html";
+                   });
+              
 
             } 
             else if (response?.status === "success" && response?.data?.role==="standard-user") {
                 localStorage.setItem("token", response?.token);
                 localStorage.setItem("user", JSON.stringify(response));
                 console.log(response?.token)
-                location.href = "../userPage/index.html";
+                swal({
+                    title: "Good Job!",
+                    text: "You are successfully logged in",
+                    icon: "success",
+                    button: "OK!",
+                  }).then(() => {
+                    location.href = "../userPage/index.html";
+                   });
+              
 
             }else {
-                alert("Unauthorised user")
-                location.href = "./signin.html";
+                swal("Error", response.message, "error");
             }
         })
         .catch((error) => {
-            console.log(error);
+            swal("Error", response.message, "error");
         });
 });

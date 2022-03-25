@@ -20,14 +20,20 @@ async function addUser() {
         });
         response = await SignUp.json();
         if (SignUp.status == 201) {
-        alert("user created")
-        window.location.href = "../sign-in/signin.html";
+            swal({
+                title: "Good Job!",
+                text: "User Created",
+                icon: "success",
+                button: "OK!",
+              }).then(() => {
+                window.location.href = "../sign-in/signin.html";
+               });
+      
         } else {
-        alert("user not created")
-        location.reload()
+            swal("Error", response.message, "error");
                 }
       
     } catch (error) {
-        alert("not registered");
+        swal("Error", response.message, "error");
     }
 }

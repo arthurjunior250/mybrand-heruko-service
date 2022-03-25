@@ -38,8 +38,14 @@ fetch(`https://my-brand-endpoints.herokuapp.com/api/v1/blog/${id}`, {
      }
 })
 .then(function (response) {
-    alert("Article Deleted")
-    location.reload();
+    swal({
+        title: "Good Job!",
+        text: "Article Deleted",
+        icon: "success",
+        button: "OK!",
+      }).then(() => {
+        location.reload();
+       });
         console.log(response);
      })
 }

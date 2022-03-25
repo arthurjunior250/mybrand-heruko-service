@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="responsiveness.css">
 </head>
 
-<body>
+<body onload="login()">
     <header>
         <nav>
             <div class="container nav-wrapper">
@@ -29,11 +29,12 @@
                     </li>
                     <li><a href="#about">ABOUT</a></li>
                     <li>
-                        <a href="#skills">MY SKILLS</a>
+                        <a href="#skills">MYSKILLS</a>
                     </li>
                     <li><a href="#projects">PROJECTS</a></li>
                     <li><a href="#blogs">BLOG</a></li>
                     <li><a href="#contacts">CONTACT</a></li>
+                    <li><a href="./userDash/dashboard.html"><img src="../images/standard.png" alt="" srcset="" style="width: 20%; height: 40%;"></a></li>
                     <li><button class="btn1" onclick="logout()">Logout</output></button></li>
                 </ul>
             </div>
@@ -226,7 +227,7 @@
             <div class="form">
                 <form>
 
-                    <input type="text" placeholder="Enter Your name.." required="" id="contact-name" onkeyup='validateName()'>
+                    <input type="text" placeholder="Enter Your name.." required="" id="contact-name" >
                     <span class='error-message' id='name-error'></span>
 
                     <input type="text" placeholder="Enter Your Email.." required="" id="contact-email" onkeyup='validateEmail()'>
@@ -308,6 +309,7 @@
     <script src="./validatesub.js"></script>
     <script src="./sendQuery.js"></script>
     <script src="../chechUser.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 
 
