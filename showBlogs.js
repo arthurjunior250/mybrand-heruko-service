@@ -32,4 +32,3 @@ const getBlogs = async() => {
 }
 getBlogs();
 
-
