@@ -12,7 +12,7 @@ const token =localStorage.getItem('token');
     {
       method: "POST",
       body: JSON.stringify({
-        image: image.files[0],
+        image: image.value,
         title: title.value,
         description:description.value,
       }),
@@ -23,6 +23,7 @@ const token =localStorage.getItem('token');
     }
   )
     .then((response) => {
+      console.log(response.message)
       swal({
         title: "Good Job!",
         text: "Article Created",
