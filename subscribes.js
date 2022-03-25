@@ -1,5 +1,5 @@
 async function subNewsletter() {
-    const email = document.getElementById("body-email").value;
+    const email = document.getElementById("body-email");
     if (email == "") {
         alert("Please fill in the email");
     } else {
@@ -10,18 +10,32 @@ async function subNewsletter() {
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
-                    email: email,
+                    email: email.value,
                 }),
             });
             response = await subscribeToNewsletter.json();
             if (subscribeToNewsletter.status == 201 && response.data) {
-                alert("successful subscribed")
+                swal({
+                    title: "Good job!",
+                    text: "Subscribed Successfully",
+                    icon: "success",
+                    button: "OK",
+                  }).then(() => {
+                    location.reload();
+                   });
+            
             } else {
-                alert("Email Exists");
-                email.value = "";
+                swal({
+                    title: "Oops!",
+                    text: "Email Exists",
+                    icon: "error",
+                    button: "OK!",
+                  }).then(() => {
+                    location.reload();
+                   });
             }
         } catch (error) {
-            alert("error");
+            swal("Error", response.message, "error");
         }
     }
 }

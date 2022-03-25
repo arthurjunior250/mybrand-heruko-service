@@ -42,8 +42,14 @@ fetch(`https://my-brand-endpoints.herokuapp.com/api/v1/inquiry/${id}`, {
    }
 })
 .then(function (response) {
-    alert("Query Deleted")
+  swal({
+    title: "Good Job!",
+    text: "Query Deleted",
+    icon: "success",
+    button: "OK!",
+  }).then(() => {
     location.reload();
+   });
       console.log(response);
    })
 }

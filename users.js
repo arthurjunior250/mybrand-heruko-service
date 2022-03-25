@@ -40,8 +40,14 @@ fetch(`https://my-brand-endpoints.herokuapp.com/api/v1/authentication/${id}`, {
    }
 })
 .then(function (response) {
-    alert("user Deleted")
+  swal({
+    title: "Good Job!",
+    text: "User Deleted",
+    icon: "success",
+    button: "OK!",
+  }).then(() => {
     location.reload();
+   });
       console.log(response);
    })
 }

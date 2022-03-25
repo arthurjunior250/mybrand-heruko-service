@@ -53,15 +53,26 @@ async function updateArticle() {
 			response = await updateArticleD.json();
 			console.log(docId);
 			if (response.success && response.message) {
-				alert("Article Updated")
-                .then(() => {
-					window.location.href = "../SidebarMenu/articles.html";
-				});
+			    swal({
+					title: "Good Job!",
+					text: "Article Updated",
+					icon: "success",
+					button: "OK!",
+				  }).then(() => {
+					location.reload();
+				   });
 			} else {
-				alert("Not Updated");
+			    swal({
+					title: "Oops!",
+					text: "Not Updated",
+					icon: "success",
+					button: "OK!",
+				  }).then(() => {
+					location.reload();
+				   });
 			}
 		} catch (error) {
-			alert("Error");
+			swal("Error", response.message, "error");
 		}
 	}
 }

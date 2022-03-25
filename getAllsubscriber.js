@@ -38,8 +38,14 @@ fetch(`https://my-brand-endpoints.herokuapp.com/api/v1/newsletter/${id}`, {
      }
 })
 .then(function (response) {
-    alert("Email Deleted")
-    location.reload();
+    swal({
+        title: "Good Job!",
+        text: "Email Deleted",
+        icon: "success",
+        button: "OK!",
+      }).then(() => {
+        location.reload();
+       });
         console.log(response);
      })
 }

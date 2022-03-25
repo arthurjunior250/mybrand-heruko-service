@@ -34,13 +34,15 @@ const getComments = async () => {
 						.map(
 							(res) => `
 							
-								<img src="../images/218005602.jpg" alt=" " srcset="" />
+								<img src="../images/standard.png" alt=" " srcset="" />
 								<div class="comment1">
-  								<h1 id="cname">${res?.owner}</h1>
+  								<h1 id="cname">${
+									res?.owner?.userName
+								}</h1>
   								<p>${new Date(res.createdAt).toDateString()}</p>
 								  <p class="lorem">${res?.comment}</p>
 								</div>
-								<button id="deletecomment" onclick="deleteCom(${res?._id})">Delete</button>
+							
 								<hr>
 								
 							`
@@ -77,20 +79,32 @@ btnContact.addEventListener("click", (e) => {
   )
     .then((response) => {
 	if(response?.status===401){
-		alert("You are unauthorized user,please login ")
+		swal({
+			title: "Oops!",
+			text: "You are unauthorized user,Please login",
+			icon: "error",
+			button: "OK!",
+		  }).then(() => {
+			location.reload();
+		   });
 	}else{
-		alert("comment sent")
+		swal({
+			title: "woow!",
+			text: "Comment Sent",
+			icon: "success",
+			button: "OK!",
+		  }).then(() => {
+			location.reload();
+		   });
 	}
-
-location.reload();
       console.log(response);
     })
 
     .catch((error) => {
-      console.log(error);
+		swal("Error", response.message, "error");
     });
 });
-
+//	<button id="deletecomment" onclick="deleteCom(${res?._id})">Delete</button>
 function deleteCom(comment){
 	const id =comment;
 	fetch(`https://my-brand-endpoints.herokuapp.com/api/v1/blog/comment${id}`, {
@@ -105,7 +119,6 @@ function deleteCom(comment){
 			console.log(response);
 })
 }
-
 
 
 

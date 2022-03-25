@@ -34,13 +34,15 @@ const getComments = async () => {
 						.map(
 							(res) => `
 							
-								<img src="../images/218005602.jpg" alt=" " srcset="" />
+								<img src="../images/standard.png" alt=" " srcset="" />
 								<div class="comment1">
-  								<h1 id="cname">${res?.owner}</h1>
+  								<h1 id="cname">${
+									res?.owner?.userName
+								}</h1>
   								<p>${new Date(res.createdAt).toDateString()}</p>
 								  <p class="lorem">${res?.comment}</p>
 								</div>
-								<button id="deletecomment" onclick="deleteCom(${res?._id})">Delete</button>
+							
 								<hr>
 								
 							`
@@ -75,15 +77,21 @@ btnContact.addEventListener("click", (e) => {
     }
   )
     .then((response) => {
-alert("comment sent")
-location.reload();
+		swal({
+			title: "woow!",
+			text: "Comment Sent",
+			icon: "success",
+			button: "OK!",
+		  }).then(() => {
+			location.reload();
+		   });
       console.log(response);
     })
     .catch((error) => {
-      console.log(error);
+		swal("Error", response.message, "error");
     });
 });
-
+	// <button id="deletecomment" onclick="deleteCom(this.id)">Delete</button>
 function deleteCom(comment){
 	const id =comment;
 	fetch(`https://my-brand-endpoints.herokuapp.com/api/v1/blog/comment${id}`, {
@@ -93,7 +101,9 @@ function deleteCom(comment){
 		 }
 	})
 	.then(function (response) {
+		if (response.success && response.message) {
 		alert("Comment Deleted")
+		}
 		location.reload();
 			console.log(response);
 })
