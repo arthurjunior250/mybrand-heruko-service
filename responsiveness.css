@@ -922,3 +922,28 @@
          width: 300px;
      }
  }
+ @media (min-width:330px)and (max-width:380px) {
+    .form {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+        width: 33%;
+        margin-left: 20px;
+    }
+    .contact-me {
+        color: black;
+        margin-top: 50px;
+        margin-bottom: 20px;
+        margin-right: 630px;
+    }
+    .map {
+        margin-left: -3px;
+    }
+    #hero {
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        margin-left: -362px;
+        margin-top: 310px;
+        width: 300px;
+    }
+}
