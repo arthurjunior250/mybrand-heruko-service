@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="../sign-in/signin.css">
     <title>Mr. ARTHUR JUNIOR</title>
 </head>
 
@@ -24,35 +25,41 @@
             <div class="about-me">
                 <img src="../images/aboutme.jpg" alt="" srcset="">
             </div>
-            <div class="loginpage">
-                <div class="login">
-                    <form id="login" method="post" action="login.php">
-                        <label><b>User Name     
-                </b>    
-                </label>
-                        <input type="text" name="Uname" id="Uname" placeholder="Username" required="" onkeyup="validateName()">
-                        <span class='error-message' id='name-error'></span>
-                        <br><br>
-                        <label><b>Email  
-                        </b> <br>  
-                        <input type="text" name="Uemail" id="email" placeholder="Email" required="" onkeyup='validateEmail()'>
-                         <span class='error-message' id='email-error'></span>
-                        <br><br>
-                        <label><b>Password     
-                </b>    
-                </label>
-                        <input type="Password" name="Pass" id="Pass" placeholder="Password" required="">
-                        <br><br>
-
-                        <input type="button" name="log" id="log" onclick="addUser()" value="Sign up">
-
-                        <br><br><span class="have">have an account? </span> <a href="../sign-in/signin.html">Sign in</a>
-                    </form>
-                </div>
-            </div>
+            <div class="wrapper">
+                <header>L</header>
+                <form action="#">
+                  <div class="field names">
+                    <div class="input-area">
+                      <input type="text" placeholder="Username" id="Uname" onkeyup="checkName()">
+                      <i class="icon fas fa-user"></i>
+                      <i class="error error-icon fas fa-exclamation-circle"></i>
+                    </div>
+                    <div class="error error-txt">Email can't be blank</div>
+                  </div>
+                  <div class="field email">
+                    <div class="input-area">
+                      <input type="text" placeholder="Email Address" id="email" onkeyup="checkEmail()">
+                      <i class="icon fas fa-envelope"></i>
+                      <i class="error error-icon fas fa-exclamation-circle"></i>
+                    </div>
+                    <div class="error error-txt">Email can't be blank</div>
+                  </div>
+                  <div class="field password">
+                    <div class="input-area">
+                      <input type="password" placeholder="Password" id="Pass" onkeyup="checkPass()">
+                      <i class="icon fas fa-lock"></i>
+                      <i class="error error-icon fas fa-exclamation-circle"></i>
+                    </div>
+                    <div class="error error-txt">Password can't be blank</div>
+                  </div>
+                  <input type="submit" value="Signup" id="log"  onclick="addUser()">
+                </form>
+                <div class="sign-txt">Have an account? <a href="../sign-in/signin.html">Login</a></div>
+              </div>
         </section>
         <p>©COPYRIGHT ARTHURJUNIOR250. ALL RIGHT RESERVED </p>
     </main>
+    <script src="../sign-in/script.js"></script>
     <script src="./signup.js"></script>
     <script src="./emailValidation.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>

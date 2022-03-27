@@ -211,3 +211,13 @@ input[type="button"] {
         font-size: 12px;
     }
 }
+
+@media(max-width:900px) {
+    .signin {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+    }
+}
