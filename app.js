@@ -4,7 +4,7 @@ window.addEventListener('resize', function() {
 
 
 function addRequiredClass() {
-    if (window.innerWidth < 860) {
+    if (window.innerWidth < 800) {
         document.body.classList.add('mobile')
     } else {
         document.body.classList.remove('mobile')
