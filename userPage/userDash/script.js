@@ -1,3 +1,9 @@
+// window.addEventListener("load", function () {
+// 	if (!localStorage.getItem("token")) {
+// 		window.location.href = "../../../../../signin.html";
+// 	}
+// });
+
 const body = document.querySelector('body'),
     sidebar = body.querySelector('nav'),
     toggle = body.querySelector(".toggle"),

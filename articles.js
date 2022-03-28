@@ -58,3 +58,8 @@ function logout(){
 }
 
 
+window.addEventListener("load", function () {
+	if (!localStorage.getItem("token")) {
+		window.location.href = "../sign-in/signin.html";
+	}
+});

@@ -1,3 +1,8 @@
+window.addEventListener("load", function () {
+	if (!localStorage.getItem("token")) {
+		window.location.href = "../sign-in/signin.html";
+	}
+});
 const token =localStorage.getItem('token');
 console.log(token)
 const getSubscribers = async() => {
@@ -55,3 +60,5 @@ function logout(){
 	localStorage.clear();
 	location.href="../sign-in/signin.html"
 }
+
+

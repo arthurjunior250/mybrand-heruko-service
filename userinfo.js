@@ -1,3 +1,8 @@
+window.addEventListener("load", function () {
+	if (!localStorage.getItem("token")) {
+		window.location.href = "../sign-in/signin.html";
+	}
+});
 const token =localStorage.getItem('token');
 const info = async () => {
 	let result = [];
@@ -9,6 +14,7 @@ const info = async () => {
 	})
 		.then((response) => response.json())
 		.then((json) => {
+			
 			result = json.data;
 			document.getElementById("email").innerHTML =result.email;
             document.getElementById("role-info").innerHTML =result.role;

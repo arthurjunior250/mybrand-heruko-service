@@ -45,3 +45,9 @@ function logout(){
 	localStorage.clear();
 	location.href="../sign-in/signin.html"
 }
+
+window.addEventListener("load", function () {
+	if (!localStorage.getItem("token")) {
+		window.location.href = "../sign-in/signin.html";
+	}
+});

@@ -1,3 +1,8 @@
+// window.addEventListener("load", function () {
+// 	if (!localStorage.getItem("token")) {
+// 		window.location.href = "./signin.html";
+// 	}
+// });
 const getBlogs = async() => {
     let result = [];
     fetch('https://my-brand-endpoints.herokuapp.com/api/v1/blog', {
