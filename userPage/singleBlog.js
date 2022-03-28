@@ -1,4 +1,8 @@
-
+window.addEventListener("load", function () {
+	if (!localStorage.getItem("token")) {
+		window.location.href = "../../sign-in/signin.html";
+	}
+});
 const DataId = location.search.substring(1);
 const readMore = async () => {
 	let result = [];
