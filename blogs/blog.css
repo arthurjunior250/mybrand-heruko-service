@@ -611,7 +611,7 @@ text-align: center;
 .blog-sect {
     background-color: #c4c4c4;
     width: 280px;
-    height: 440px;
+    height: 500px;
     border-radius: 5%;
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
     margin-bottom: 40px;
@@ -649,19 +649,24 @@ text-align: center;
 .emoji1 img {
     width: 40px;
     height: 40px;
-    margin-left: 65px;
+    margin-top: -10px;
 }
 
 
-/* .emoji1:hover {
-    color: #d4af37;
+.emoji1{
     background-color: #d4af37;
+    display: flex;
+    text-align: center;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10%;
 }
-
+/* 
 .emoji:hover {
     color: #d4af37;
     background-color: #d4af37;
-} */
+} */ */
 
 span {
     color: red;
