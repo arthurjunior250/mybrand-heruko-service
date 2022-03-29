@@ -20,6 +20,9 @@ main {
 .info {
     margin-top: 120px;
 }
+.info a{
+    text-decoration: none;
+}
 
 .pic {
     margin-top: 120px;
@@ -364,7 +367,18 @@ img {
 .emoji1 img {
     width: 40px;
     height: 40px;
-    margin-left: 65px;
+    margin-top: -10px;
+}
+
+
+.emoji1{
+    background-color: #d4af37;
+    display: flex;
+    text-align: center;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10%;
 }
 
 

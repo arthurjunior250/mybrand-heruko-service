@@ -25,8 +25,8 @@ const getBlogs = async() => {
        <p> ${res?.description?.slice(1,200)}</p>
 
       <div class="emoji1">
-           <img src="../images/comment.png" alt="" srcset="">
-             <img src="../images/like.png" alt="" srcset="">
+      <p>${res?.comments?.length}</p> 
+      <img src="../images/comment.png" alt="" srcset="">
          </div>
           </div>
       `
