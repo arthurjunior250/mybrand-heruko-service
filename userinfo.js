@@ -13,10 +13,12 @@ const info = async () => {
       }
 	})
 		.then((response) => response.json())
+	
 		.then((json) => {
 			
 			result = json.data;
 			document.getElementById("email").innerHTML =result.email;
+			document.getElementById("name-info").innerHTML =result.userName;
             document.getElementById("role-info").innerHTML =result.role;
             document.getElementById("email-info").innerHTML =result.email;
 		})

@@ -678,12 +678,18 @@
          text-align: center;
      }
      .project-sect {
-         background-color: #C4C4C4;
-         width: 280px;
-         height: 390px;
-         border-radius: 5%;
-         box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
-     }
+        background-color: #C4C4C4;
+        width: 280px;
+        height: 390px;
+        border-radius: 5%;
+        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .blog-sect{
+       margin-left: auto;
+       margin-right: auto;
+    }
      .project-sect img {
          width: 280px;
          height: 130px;
@@ -1025,29 +1031,29 @@
    }
 }
 @media (min-width:360px)and (max-width:380px) {
-   .form {
-       border-radius: 5px;
-       background-color: #f2f2f2;
-       padding: 20px;
-       width: 31%;
-       margin-left: 20px;
-   }
-   .contact-me {
-       color: black;
-       margin-top: 50px;
-       margin-bottom: 20px;
-       margin-right: 630px;
-   }
-   .map {
-       margin-left: -3px;
-   }
-   #hero {
-       width: 100%;
-       background-color: rgba(0, 0, 0, 0.8);
-       margin-left: -370px;
-       margin-top: 310px;
-       width: 300px;
-   }
+    .form {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+        width: 33%;
+        margin-left: 20px;
+    }
+    .contact-me {
+        color: black;
+        margin-top: 50px;
+        margin-bottom: 20px;
+        margin-right: 630px;
+    }
+    .map {
+        margin-left: -3px;
+    }
+    #hero {
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        margin-left: -362px;
+        margin-top: 310px;
+        width: 300px;
+    }
 }
 @media (min-width:390px)and (max-width:400px) {
    .form {
