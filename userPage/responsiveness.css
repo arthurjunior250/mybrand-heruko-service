@@ -1031,6 +1031,14 @@
    }
 }
 @media (min-width:360px)and (max-width:380px) {
+    .nav-wrapper ul.nav-list li a {
+        color: white;
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: bolder;
+        letter-spacing: 1px;
+        transition: all 0.5s ease-in-out;
+    }
     .form {
         border-radius: 5px;
         background-color: #f2f2f2;
