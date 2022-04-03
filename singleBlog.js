@@ -59,7 +59,7 @@ getComments();
 
 //comment on blog
 const token =localStorage.getItem('token');
-const message = document.getElementById("contact-message");
+const message = document.getElementById("contact-message").value;
 const btnContact= document.getElementById("send");
 btnContact.addEventListener("click", (e) => {
   e.preventDefault();
@@ -68,7 +68,7 @@ btnContact.addEventListener("click", (e) => {
     {
       method: "POST",
       body: JSON.stringify({
-        comment: message.value,
+        comment: message,
       }),
 	  headers: {
         "Content-Type": "application/json",
@@ -82,6 +82,16 @@ btnContact.addEventListener("click", (e) => {
 		swal({
 			title: "Oops!",
 			text: "You are unauthorized user,Please login",
+			icon: "error",
+			button: "OK!",
+		  }).then(() => {
+			location.reload();
+		   });
+	}
+	else if(response?.status===400){
+		swal({
+			title: "Oops!",
+			text: "Bad Request",
 			icon: "error",
 			button: "OK!",
 		  }).then(() => {
