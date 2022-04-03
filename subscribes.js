@@ -1,7 +1,7 @@
 async function subNewsletter() {
-    const email = document.getElementById("body-email");
+    const email = document.getElementById("body-email").value;
     if (email == "") {
-        alert("Please fill in the email");
+        swal("Error", "Please enter your email to subscribe", "error");
     } else {
         try {
             const subscribeToNewsletter = await fetch("https://my-brand-endpoints.herokuapp.com/api/v1/newsletter", {
@@ -10,7 +10,7 @@ async function subNewsletter() {
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
-                    email: email.value,
+                    email: email,
                 }),
             });
             response = await subscribeToNewsletter.json();
