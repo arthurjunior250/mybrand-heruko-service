@@ -16,6 +16,7 @@ const get = async () => {
 		.then((json) => {
 			result = json.data;
 			document.getElementById("email").innerHTML =result.email;
+			document.getElementById("first_name").innerHTML =result.userName;
 
 		})
 		.catch((err) => console.log(err));

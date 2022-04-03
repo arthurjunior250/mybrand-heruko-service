@@ -22,7 +22,7 @@
                 </span>
 
                 <div class="text logo-text">
-                    <span class="name"><h4><b id="first_name">Arthur</b> <b id="last_name">Junior</b></h4></span>
+                    <span class="name"><h4><b id="first_name"></b></h4></span>
                     <span class="profession" id="email" style="font-size: 11px;"></span>
                 </div>
             </div>
@@ -106,41 +106,6 @@
     </section>
 
 
-    <script defer>
-        async function getProfile() {
-            let user = localStorage.getItem('user');
-            if (!user) return window.location.href = "./index.html ";
-            user = JSON.parse(user);
-
-
-            document.getElementById('first_name').innerHTML = "Arthur";
-            document.getElementById('last_name').innerHTML = "Junior";
-            document.getElementById('email').innerHTML = user.email;
-
-
-            const citiesRef = db.collection('users');
-            const snapshot = await citiesRef.where('email', '==', user.email).get();
-            if (snapshot.empty) {
-                console.log('No matching documents.');
-                return;
-            }
-
-            snapshot.forEach(doc => {
-                console.log(JSON.stringify(doc.data()));
-            });
-        }
-        getProfile();
-
-
-
-        // ............................queries.......................
-    </script>
-
-    <script defer src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js "></script>
-    <script defer src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js "></script>
-    <script defer src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js "></script>
-
-    <script defer src="https://www.gstatic.com/firebasejs/7.21.1/firebase-storage.js"></script>
     <script defer src="../configuration.js"></script>
     <script defer src="../comment.js"></script>
     <script defer src="../createblogs.js"></script>
@@ -148,6 +113,8 @@
     <script src="../userProfile.js"></script>
     <script src="../checkAdmin.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="../userinfo.js"></script>
+
 </body>
 
 </html>
