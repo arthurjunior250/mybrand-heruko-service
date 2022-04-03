@@ -81,6 +81,10 @@ btnContact.addEventListener("click", (e) => {
     }
   )
     .then((response) => {
+		if(response.status !== 201)
+		{
+			swal("Error","comment not sent", "error");
+		}else{
 		swal({
 			title: "woow!",
 			text: "Comment Sent",
@@ -88,7 +92,7 @@ btnContact.addEventListener("click", (e) => {
 			button: "OK!",
 		  }).then(() => {
 			location.reload();
-		   });
+		   });}
       console.log(response);
     })
     .catch((error) => {

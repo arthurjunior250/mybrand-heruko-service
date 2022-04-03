@@ -22,6 +22,10 @@ btnContact.addEventListener("click", (e) => {
     }
   )
     .then((response) => {
+      console.log(response);
+      if(response.status !== 201){
+        swal("Error","Message not sent", "error");
+      }else{
       swal({
         title: "Good job!",
         text: "Message Sent!",
@@ -29,11 +33,9 @@ btnContact.addEventListener("click", (e) => {
         button: "Ok!",
       }).then(() => {
         location.reload();
-       });
+       });}
     })
     .catch((error) => {
       swal("Error", response.message, "error");
     });
 });
-
-

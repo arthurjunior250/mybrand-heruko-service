@@ -1,15 +1,9 @@
 
-const names = document.getElementById("contact-name").value;
-const email = document.getElementById("contact-email").value;
-const message = document.getElementById("contact-message").value;
+const names = document.getElementById("contact-name");
+const email = document.getElementById("contact-email");
+const message = document.getElementById("contact-message");
 const btnContact= document.getElementById("submit");
-if (names == "") {
-  swal("Error", "Please fill in the name", "error");
-} else if (email == "") {
-  swal("Error", "Please fill in the email", "error");
-} else if (message == "") {
-  swal("Error", "Please fill in the message", "error");
-} else {
+
 btnContact.addEventListener("click", (e) => {
   e.preventDefault();
 
@@ -18,9 +12,9 @@ btnContact.addEventListener("click", (e) => {
     {
       method: "POST",
       body: JSON.stringify({
-        names: names,
-        email: email,
-        message:message,
+        names: names.value,
+        email: email.value,
+        message:message.value,
       }),
       headers: {
         "Content-Type": "application/json",
@@ -29,6 +23,9 @@ btnContact.addEventListener("click", (e) => {
   )
     .then((response) => {
       console.log(response);
+      if(response.status !== 201){
+        swal("Error","Message not sent", "error");
+      }else{
       swal({
         title: "Good job!",
         text: "Message Sent!",
@@ -36,10 +33,9 @@ btnContact.addEventListener("click", (e) => {
         button: "Ok!",
       }).then(() => {
         location.reload();
-       });
+       });}
     })
     .catch((error) => {
       swal("Error", response.message, "error");
     });
 });
-}
