@@ -10,6 +10,8 @@
 </head>
 
 <body id="home">
+
+  <div id="preloader"></div>
     <header>
         <nav>
             <div class="container nav-wrapper">
@@ -78,6 +80,12 @@
     <script defer src="../validation.js"></script>
     <script defer src="./../configuration.js"></script>
     <script defer src="../allblogs.js"></script>
+    <script>
+        var loader = document.getElementById("preloader")
+        window.addEventListener("load", () => {
+          loader.style.display = "none"
+        })
+      </script>
 </body>
 
 </html>

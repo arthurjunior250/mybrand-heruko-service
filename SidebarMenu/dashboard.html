@@ -12,6 +12,7 @@
 </head>
 
 <body>
+    <div id="preloader"></div>
     <nav class="sidebar close">
         <header>
             <a href="./userProfile.html">
@@ -116,7 +117,15 @@
 
                 </tr>
             </table>
+            <div id="dashboard__items" class="dashboard__items__row">
+                <div class="dashboard__overview">
+                  <div class="blog__analytics">
+                    <div id="piechart" class="chart__container"></div>
+                  </div>
+                </div>
+              </div>
             </div>
+           
     </section>
  
     <script src="../dashboard.js"></script>
@@ -124,6 +133,16 @@
   <script src="../userProfile.js"></script>
   <script src="../checkAdmin.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="../piechart.js"></script>
+
+  <script>
+    var loader = document.getElementById("preloader")
+    window.addEventListener("load", () => {
+      loader.style.display = "none"
+    })
+  </script>
+  
 </body>
 
 </html>
