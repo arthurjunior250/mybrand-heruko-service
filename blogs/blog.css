@@ -5,6 +5,14 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+#preloader {
+    background: white url(../images/freeback.gif) no-repeat center center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-size: 15%;
+    z-index: 2000;
+  }
 #deletecomment{
     width: 10%;
     margin-bottom: 10px;

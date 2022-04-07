@@ -12,6 +12,7 @@
 </head>
 
 <body>
+    <div id="preloader"></div>
     <nav class="sidebar close">
         <header>
             <a href="./userProfile.html">
@@ -107,8 +108,13 @@
  <script src="./logout.js"></script>
     <script src="script.js"></script>
   <script src="../../userinfo.js"></script>
-  <script src="../../chechUser.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script>
+    var loader = document.getElementById("preloader")
+    window.addEventListener("load", () => {
+      loader.style.display = "none"
+    })
+  </script>
 </body>
 
 </html>

@@ -11,6 +11,7 @@
 </head>
 
 <body>
+  <div id="preloader"></div>
     <header>
         <nav>
             <div class="container nav-wrapper">
@@ -63,6 +64,12 @@
     <script src="./signup.js"></script>
     <script src="./emailValidation.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+      var loader = document.getElementById("preloader")
+      window.addEventListener("load", () => {
+        loader.style.display = "none"
+      })
+    </script>
   
 </body>
 

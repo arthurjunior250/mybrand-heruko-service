@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="responsiveness.css">
 </head>
 
-<body onload="login()">
+<body >
+    <div id="preloader"></div>
     <header>
         <nav>
             <div class="container nav-wrapper">
@@ -308,8 +309,13 @@
     <script src="./subscribes.js"></script>
     <script src="./validatesub.js"></script>
     <script src="./sendQuery.js"></script>
-    <script src="../chechUser.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        var loader = document.getElementById("preloader")
+        window.addEventListener("load", () => {
+          loader.style.display = "none"
+        })
+      </script>
 
 
 

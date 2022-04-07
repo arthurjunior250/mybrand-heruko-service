@@ -12,6 +12,7 @@
 </head>
 
 <body>
+    <div id="preloader"></div>
     <header>
         <nav>
             <div class="container nav-wrapper">
@@ -311,7 +312,12 @@
     <script src="./sendQuery.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
-
+    <script>
+        var loader = document.getElementById("preloader")
+        window.addEventListener("load", () => {
+          loader.style.display = "none"
+        })
+      </script>
 
 
 </body>
