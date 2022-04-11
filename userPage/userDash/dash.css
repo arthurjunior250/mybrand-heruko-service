@@ -732,11 +732,16 @@ input[type=submit] {
     .blog-sect {
         background-color: #c4c4c4;
         width: 100%;
-        height: 800px;
+        height: 600px;
         margin-top: 80px;
         border-radius: 5%;
         box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
         margin-right: 10px;
+    }
+    .blog-sect img {
+        width: 100%;
+        height: 30%;
+        padding: 10px;
     }
     
 }
