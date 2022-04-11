@@ -39,13 +39,16 @@ users();
 
 const comment = async () => {
 	let result = [];
-	fetch("https://my-brand-endpoints.herokuapp.com/api/v1/blog", {
+	fetch("https://my-brand-endpoints.herokuapp.com/api/v1/inquiry", {
 		method: "GET",
+		headers: {"Content-type": "application/json", 
+        "authorization": 'bearer '+token
+      }
 	})
 		.then((response) => response.json())
 		.then((json) => {
 			result = json.data;
-			document.getElementById("com").innerHTML =result.comments.length;
+			document.getElementById("com").innerHTML =result.length;
 
 		})
 		.catch((err) => console.log(err));

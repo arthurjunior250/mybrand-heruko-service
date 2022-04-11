@@ -5,6 +5,11 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+.card--header {
+    display: flex;
+    padding: 20px;
+    flex-direction: row;
+}
 #preloader {
     background: white url(../images/freeback.gif) no-repeat center center;
     width: 100%;
@@ -675,4 +680,18 @@ input[type=submit] {
     .sidebar2 {
         display: none;
     }
+    .card--header {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.card{
+    margin: 20px;
+    border-radius: 5%;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+    width: 150px;
+    text-align: center;
+}
+.card:hover{
+    box-shadow: 4px 4px 16px #d4af37;
 }

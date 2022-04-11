@@ -145,7 +145,22 @@ h2 {
     color: white;
     margin-top: 20px;
     font-size: 20px;
+    /* animation:typing 4s steps(200,end) forwards,
+    blink 1s infinite;
+    white-space: normal; */
 }
+/* @keyframes typing {
+    0% { width:0% }
+    100% { width:100% }
+  }
+  @keyframes blink {
+    0%,100% {
+      border-right:2px solid transparent;
+    }
+    50% {
+      border-right:2px solid #222;
+    }
+  } */
 
 img {
     width: 462px;
@@ -550,7 +565,6 @@ textarea {
     float: right;
     margin-top: -40px;
 }
-
 .line {
     height: 10px;
     width: 200px;
@@ -798,3 +812,29 @@ html {
 #hero p {
     font-size: 15px;
 }
+.map a{
+    text-decoration: none;
+    color: #000;
+}
+
+/* //icons */
+.social-links a {
+    font-size: 18px;
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 4px;
+    border-radius: 4px;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+  }
+  
+  .social-links a:hover {
+    background: #d4af37;
+    color: #000;
+    text-decoration: none;
+  }
