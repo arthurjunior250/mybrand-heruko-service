@@ -91,8 +91,9 @@
     <section class="home">
         <div class="text">Dashboard</div>
         <input type="text" placeholder="Search Dashboard..."><button class="search">Search</button>
-        <div>
-            <table style="width:30%">
+
+        <div class="card--header">
+            <!-- <table style="width:30%">
                 <tr>
                     <th colspan="2">Site info</th>
                 </tr>
@@ -116,7 +117,27 @@
                     <td>Subscribes</td>
 
                 </tr>
-            </table>
+            </table> -->
+            <div class="card">
+                <i class="fa-solid fa-blog"></i>
+                <h2>Blog</h2>
+                <p id="art" style="background-color:#d4af37; width: 20%;"></p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-users"></i>
+                <h2>Users</h2>
+                <p id="users" style="background-color:#d4af37; width: 20%;"></p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-person-circle-check"></i>
+                <h2>Newsletter</h2>
+                <p  id="newsletter" style="background-color:#d4af37; width: 20%;"></p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-question"></i>
+                <h2>Questions</h2>
+                <p  id="com" style="background-color:#d4af37; width: 20%;"></p>
+            </div>
             <div id="dashboard__items" class="dashboard__items__row">
                 <div class="dashboard__overview">
                   <div class="blog__analytics">
@@ -135,6 +156,7 @@
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script src="../piechart.js"></script>
+  <script src="https://kit.fontawesome.com/0a4d7d84a7.js" crossorigin="anonymous"></script>
 
   <script>
     var loader = document.getElementById("preloader")
