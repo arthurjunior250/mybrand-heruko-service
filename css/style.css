@@ -6,7 +6,7 @@
     font-family: 'Poppins', sans-serif;
 }  
 nav {
-    background-image: url(./images/concrete_wall.png);
+    background-image: url(../images/concrete_wall.png);
     color: white;
     position: fixed;
     width: 100%;
@@ -15,7 +15,7 @@ nav {
 }
 /* *Preloader* */
 #preloader {
-    background: white url(./images/freeback.gif) no-repeat center center;
+    background: white url(../images/freeback.gif) no-repeat center center;
     width: 100%;
     height: 100%;
     position: fixed;
@@ -24,7 +24,7 @@ nav {
   }
 
 main {
-    background-image: url(./images/concrete_wall.png);
+    background-image: url(../images/concrete_wall.png);
 }
 
 .info {
@@ -171,7 +171,7 @@ img {
 /* .............................................about me ........................ */
 
 .about-me {
-    background-image: url(./images/zan-wGqz5YSqsfk-unsplash.jpg);
+    background-image: url(../images/zan-wGqz5YSqsfk-unsplash.jpg);
     background-size: cover;
     display: flex;
 }
@@ -410,11 +410,7 @@ img {
 .emoji:hover {
     color: #d4af37;
     background-color: #d4af37;
-} */ */
-
-span {
-    color: red;
-}
+} */ 
 
 
 /* ........................................contact me ................................ */
@@ -605,7 +601,7 @@ html {
 }
 
 .mobile ul.nav-list {
-    background-image: url(./images/concrete_wall.png);
+    background-image: url(../images/concrete_wall.png);
     position: fixed;
     left: 0;
     top: 0;

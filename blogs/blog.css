@@ -462,7 +462,27 @@ text-align: center;
     width: 100%;
     margin-bottom: 40px;
 }
-
+/* //icons */
+.social-links a {
+    font-size: 18px;
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 4px;
+    border-radius: 4px;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+  }
+  
+  .social-links a:hover {
+    background: #d4af37;
+    color: #000;
+    text-decoration: none;
+  }
 @media (min-width: 322px) and (max-width:415px) {
     #no{
         display: table;

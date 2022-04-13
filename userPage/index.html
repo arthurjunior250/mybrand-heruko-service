@@ -46,7 +46,7 @@
             <div class="info">
                 <h2>Hi there! I'm</h2>
                 <h1>Arthur Junior,</h1>
-                <h1>Fullstack Developer</h1>
+                <h1><span class="auto-input"></span></h1>
                 <h1>based in Kigali,Rwanda</h1>
                 <p>
                     My specialty is FrontEnd web design and development, making pixel magic in photoshop and turning it beautiful. extend beyond the web I love helping people with branding. I even love making designs move by professionals.
@@ -285,13 +285,14 @@
                     <p>Gasabo</p>
                     <p>KK,250</p>
                 </div>
-                <div class="icons">
-                    <a href="https://twitter.com/arthurjunior250"target="_blank"><img src="./images/twitter.png" alt="" srcset=""></a>
-                    <a href="https://www.instagram.com/arthurjunior250/"target="_blank"><img src="./images/instagram.png" alt="" srcset=""></a>
-                    <a href="https://www.youtube.com/channel/UCYaW5tJrInABUs3MMNAzCFw?view_as=subscriber"target="_blank"><img src="./images/youtube.png" alt="" srcset=""></a>
-                    <a href="https://www.linkedin.com/in/dusabimana-arthur-junior-a8189820a?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B5Im4%2B23OTsSVtesCYyzSmQ%3D%3D" target="_blank"><img src="./images/linkedin.png" alt="" srcset=""></a>
-                    <a href="https://web.facebook.com/ARTHURJUNIOR250/timeline?lst=100003757660403%3A100003757660403%3A1595038098"target="_blank"><img src="./images/facebook.png" alt="" srcset=""></a>
-                </div>
+                <div class="social-links icons">
+                    <a href="https://twitter.com/arthurjunior250"target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://web.facebook.com/ARTHURJUNIOR250/timeline?lst=100003757660403%3A100003757660403%3A1595038098"target="_blank" class="facebook"> <i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/arthurjunior250/"target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/channel/UCYaW5tJrInABUs3MMNAzCFw?view_as=subscriber"target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.linkedin.com/in/dusabimana-arthur-junior-a8189820a?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B5Im4%2B23OTsSVtesCYyzSmQ%3D%3D" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    
+                  </div>
                 <div class="newsletter">
                     <p>Subscribe to my newsletter</p>
                     <input type="text" placeholder="Enter Your Email.." required="" id="body-email" onkeyup='validateE()'><br>
@@ -316,8 +317,17 @@
           loader.style.display = "none"
         })
       </script>
-
-
+<!-- //auto-input -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+	var typed = new Typed(".auto-input", {
+		strings:["Fullstack Developer ", "Frontend Developer","Backend Developer", "UI Designer"],
+		typeSpeed: 100,
+		backSpeed: 100,
+		loop: true
+	})
+</script>
+<script src="https://kit.fontawesome.com/0a4d7d84a7.js" crossorigin="anonymous"></script>
 
 
 </body>
