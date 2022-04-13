@@ -23,7 +23,8 @@ const token =localStorage.getItem('token');
     }
   )
     .then((response) => {
-      console.log(response.message)
+      console.log(response.statusText)
+      if (response.status==201) {
       swal({
         title: "Good Job!",
         text: "Article Created",
@@ -32,15 +33,20 @@ const token =localStorage.getItem('token');
       }).then(() => {
         location.reload();
        });
-      
-      console.log(response);
-    })
+    
+    }  else{
+      swal({
+        title: "Oops!",
+        text:response.statusText,
+        icon: "error",
+        button: "OK!",
+      })
+    }}
+  )
     .catch((error) => {
-      swal("Error", response.message, "error");
+      swal("Error", response.statusText, "error");
     });
 });
-
-
 function logout(){
 	localStorage.clear();
 	location.href="../sign-in/signin.html"

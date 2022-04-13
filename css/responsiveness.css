@@ -92,7 +92,7 @@
          overflow-x: hidden;
      }
      nav {
-         background-image: url(./images/concrete_wall.png);
+         background-image: url(../images/concrete_wall.png);
          color: white;
          position: fixed;
          width: 100%;
@@ -155,7 +155,7 @@
      }
      /* ...........................................about-me..................................... */
      .about-me {
-         background-image: url(./images/zan-wGqz5YSqsfk-unsplash.jpg);
+         background-image: url(../images/zan-wGqz5YSqsfk-unsplash.jpg);
          background-size: cover;
          margin-left: auto;
          margin-right: auto;
@@ -494,7 +494,7 @@
          overflow-x: hidden;
      }
      nav {
-         background-image: url(./images/concrete_wall.png);
+         background-image: url(../images/concrete_wall.png);
          color: white;
          position: fixed;
          width: 100%;
@@ -557,7 +557,7 @@
      }
      /* ...........................................about-me..................................... */
      .about-me {
-         background-image: url(./images/zan-wGqz5YSqsfk-unsplash.jpg);
+         background-image: url(../images/zan-wGqz5YSqsfk-unsplash.jpg);
          background-size: cover;
          margin-left: auto;
          margin-right: auto;
@@ -915,7 +915,7 @@
  
  @media (min-width:768px) and (max-width:900px) {
      nav {
-         background-image: url(./images/concrete_wall.png);
+         background-image: url(../images/concrete_wall.png);
          color: white;
          position: fixed;
          width: 100%;
@@ -1031,14 +1031,18 @@
         border-radius: 5px;
         background-color: #f2f2f2;
         padding: 20px;
-        width: 36%;
-        margin-left: 20px;
+        width: 75%;
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
     }
     .contact-me {
         color: black;
         margin-top: 50px;
         margin-bottom: 20px;
-        margin-right: 630px;
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
     }
     .map {
         margin-left: -1px;
@@ -1066,14 +1070,18 @@
         border-radius: 5px;
         background-color: #f2f2f2;
         padding: 20px;
-        width: 33%;
-        margin-left: 20px;
+        width:75%;
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
     }
     .contact-me {
         color: black;
         margin-top: 50px;
         margin-bottom: 20px;
-        margin-right: 630px;
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
     }
     .map {
         margin-left: -3px;
@@ -1081,7 +1089,7 @@
     #hero {
         width: 100%;
         background-color: rgba(0, 0, 0, 0.8);
-        margin-left: -362px;
+        margin-left: -370px;
         margin-top: 310px;
         width: 300px;
     }
@@ -1091,14 +1099,15 @@
         border-radius: 5px;
         background-color: #f2f2f2;
         padding: 20px;
-        width: 34%;
-        margin-left: 20px;
+        width: 80%;
+        margin-left:40px;
     }
     .contact-me {
-        color: black;
-        margin-top: 50px;
-        margin-bottom: 20px;
-        margin-right: 630px;
+    color: black;
+    margin-top: 50px;
+     display: table;
+     margin-left: auto;
+     margin-right: auto;
     }
     .map {
         margin-left: -3px;
@@ -1116,14 +1125,18 @@
         border-radius: 5px;
         background-color: #f2f2f2;
         padding: 20px;
-        width: 27%;
-        margin-left: 20px;
+        width: 70%;
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
     }
     .contact-me {
         color: black;
         margin-top: 50px;
         margin-bottom: 20px;
-        margin-right: 630px;
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
     }
     .map {
         margin-left: -30px;
