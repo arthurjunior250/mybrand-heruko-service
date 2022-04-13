@@ -92,7 +92,7 @@
          overflow-x: hidden;
      }
      nav {
-         background-image: url(./images/concrete_wall.png);
+         background-image: url(../images/concrete_wall.png);
          color: white;
          position: fixed;
          width: 100%;
@@ -155,7 +155,7 @@
      }
      /* ...........................................about-me..................................... */
      .about-me {
-         background-image: url(./images/zan-wGqz5YSqsfk-unsplash.jpg);
+         background-image: url(../images/zan-wGqz5YSqsfk-unsplash.jpg);
          background-size: cover;
          margin-left: auto;
          margin-right: auto;
@@ -494,7 +494,7 @@
          overflow-x: hidden;
      }
      nav {
-         background-image: url(./images/concrete_wall.png);
+         background-image: url(../images/concrete_wall.png);
          color: white;
          position: fixed;
          width: 100%;
@@ -557,7 +557,7 @@
      }
      /* ...........................................about-me..................................... */
      .about-me {
-         background-image: url(./images/zan-wGqz5YSqsfk-unsplash.jpg);
+         background-image: url(../images/zan-wGqz5YSqsfk-unsplash.jpg);
          background-size: cover;
          margin-left: auto;
          margin-right: auto;
@@ -915,7 +915,7 @@
  
  @media (min-width:768px) and (max-width:900px) {
      nav {
-         background-image: url(./images/concrete_wall.png);
+         background-image: url(../images/concrete_wall.png);
          color: white;
          position: fixed;
          width: 100%;
